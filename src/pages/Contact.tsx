@@ -11,6 +11,12 @@ const Contact = () => {
         message: ''
     });
 
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+    };
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({
             ...formData,
@@ -21,7 +27,17 @@ const Contact = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // Handle form submission here
-        console.log('Form submitted:', formData);
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({ 'form-name': 'contact', ...formData }),
+        })
+            .then(() => alert('Success!'))
+            .catch((error) => alert(error));
+
+
+
+        // console.log('Form submitted:', formData);
     };
 
     const contactInfo = [
@@ -93,7 +109,7 @@ const Contact = () => {
                         <div className="bg-white rounded-2xl shadow-xl p-8">
                             <h2 className="text-3xl font-bold text-gray-900 mb-8">Start Your Project</h2>
 
-                            <form className="space-y-6" method="post" netlify name="contact">
+                            <form className="space-y-6" method="post" onSubmit={handleSubmit} netlify data-netlify="true" name="contact" data-netlify-honeypot="bot-field">
                                 {/*<form onSubmit={handleSubmit} className="space-y-6" netlify>*/}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
@@ -210,6 +226,7 @@ const Contact = () => {
                                 </button>
 
                                 <input type="hidden" name="form-name" value="contact" />
+                                <input type="hidden" name="bot-field" />
                             </form>
                         </div>
 
