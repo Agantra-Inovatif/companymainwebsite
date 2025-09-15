@@ -9,7 +9,8 @@ import Apps from './pages/Apps';
 // import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
-import AILabs from './pages/AILab'
+import AILabs from './pages/AILab';
+import Web3Labs from './pages/Web3Lab';
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/blog" element={<Blog/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/ailabs" element={<AILabs/>}/>
+                    <Route path="/web3labs" element={<Web3Labs/>}/>
                 </Routes>
                 <Footer/>
             </div>

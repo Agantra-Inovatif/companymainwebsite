@@ -119,7 +119,7 @@ const Home = () => {
             <section className="py-20">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                        AI Labs Innovations
+                        AI Innovation Labs
                     </h2>
                     <p className="text-xl text-gray-600 mb-8">
                        We develop our in-house or use AI Models and transforms into business usage. It will help business to create a new opportunity or cutting cost
@@ -134,9 +134,28 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Web 3 Labs Section */}
+            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold mb-4">Web 3.0 Innovation Labs</h2>
+                        <p className="text-xl opacity-90">The Web3.0 Innovation Lab at Next Mantra is where legacy systems evolve into trustless, interoperable ecosystems. Our platform empowers businesses to harness blockchain, smart contracts, and tokenization to unlock new models of ownership, governance, and engagement.</p>
+                    </div>
+                    <div className="text-center">
+                        <Link
+                            to="/web3-labs"
+                            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+                        >
+                            Visit Web3 Labs
+                            <ArrowRight className="ml-2 h-5 w-5"/>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
 
             {/* Apps Section */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-4">Apps</h2>
