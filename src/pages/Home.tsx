@@ -143,7 +143,7 @@ const Home = () => {
                     </div>
                     <div className="text-center">
                         <Link
-                            to="/web3-labs"
+                            to="/web3labs"
                             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center"
                         >
                             Visit Web3 Labs
