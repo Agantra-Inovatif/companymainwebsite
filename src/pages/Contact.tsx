@@ -25,7 +25,7 @@ const Contact = () => {
     };
 
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+
         // Handle form submission here
         fetch('/', {
             method: 'POST',
@@ -36,7 +36,7 @@ const Contact = () => {
             .catch((error) => alert(error));
 
 
-
+        e.preventDefault();
         // console.log('Form submitted:', formData);
     };
 
