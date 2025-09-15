@@ -109,125 +109,137 @@ const Contact = () => {
                         <div className="bg-white rounded-2xl shadow-xl p-8">
                             <h2 className="text-3xl font-bold text-gray-900 mb-8">Start Your Project</h2>
 
-                            <form className="space-y-6" method="post" onSubmit={handleSubmit} netlify data-netlify="true" name="contact" data-netlify-honeypot="bot-field">
-                                {/*<form onSubmit={handleSubmit} className="space-y-6" netlify>*/}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                                            Full Name *
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            required
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                                            placeholder="Your full name"
-                                        />
-                                    </div>
+                            {/*<form className="space-y-6" method="post" onSubmit={handleSubmit} netlify data-netlify="true" name="contact" data-netlify-honeypot="bot-field">*/}
+                            {/*    /!*<form onSubmit={handleSubmit} className="space-y-6" netlify>*!/*/}
+                            {/*    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">*/}
+                            {/*        <div>*/}
+                            {/*            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">*/}
+                            {/*                Full Name **/}
+                            {/*            </label>*/}
+                            {/*            <input*/}
+                            {/*                type="text"*/}
+                            {/*                id="name"*/}
+                            {/*                name="name"*/}
+                            {/*                value={formData.name}*/}
+                            {/*                onChange={handleChange}*/}
+                            {/*                required*/}
+                            {/*                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"*/}
+                            {/*                placeholder="Your full name"*/}
+                            {/*            />*/}
+                            {/*        </div>*/}
 
-                                    <div>
-                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2" >
-                                            Email Address *
-                                        </label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            required
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                                            placeholder="your.email@company.com"
-                                        />
-                                    </div>
-                                </div>
+                            {/*        <div>*/}
+                            {/*            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2" >*/}
+                            {/*                Email Address **/}
+                            {/*            </label>*/}
+                            {/*            <input*/}
+                            {/*                type="email"*/}
+                            {/*                id="email"*/}
+                            {/*                name="email"*/}
+                            {/*                value={formData.email}*/}
+                            {/*                onChange={handleChange}*/}
+                            {/*                required*/}
+                            {/*                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"*/}
+                            {/*                placeholder="your.email@company.com"*/}
+                            {/*            />*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
 
-                                <div>
-                                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                                        Company Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="company"
-                                        name="company"
-                                        value={formData.company}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                                        placeholder="Your company name"
-                                    />
-                                </div>
+                            {/*    <div>*/}
+                            {/*        <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">*/}
+                            {/*            Company Name*/}
+                            {/*        </label>*/}
+                            {/*        <input*/}
+                            {/*            type="text"*/}
+                            {/*            id="company"*/}
+                            {/*            name="company"*/}
+                            {/*            value={formData.company}*/}
+                            {/*            onChange={handleChange}*/}
+                            {/*            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"*/}
+                            {/*            placeholder="Your company name"*/}
+                            {/*        />*/}
+                            {/*    </div>*/}
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label htmlFor="service"
-                                               className="block text-sm font-medium text-gray-700 mb-2">
-                                            Service Interested In *
-                                        </label>
-                                        <select
-                                            id="service"
-                                            name="service"
-                                            value={formData.service}
-                                            onChange={handleChange}
-                                            required
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                                        >
-                                            <option value="">Select a service</option>
-                                            {services.map((service, index) => (
-                                                <option key={index} value={service}>{service}</option>
-                                            ))}
-                                        </select>
-                                    </div>
+                            {/*    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">*/}
+                            {/*        <div>*/}
+                            {/*            <label htmlFor="service"*/}
+                            {/*                   className="block text-sm font-medium text-gray-700 mb-2">*/}
+                            {/*                Service Interested In **/}
+                            {/*            </label>*/}
+                            {/*            <select*/}
+                            {/*                id="service"*/}
+                            {/*                name="service"*/}
+                            {/*                value={formData.service}*/}
+                            {/*                onChange={handleChange}*/}
+                            {/*                required*/}
+                            {/*                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"*/}
+                            {/*            >*/}
+                            {/*                <option value="">Select a service</option>*/}
+                            {/*                {services.map((service, index) => (*/}
+                            {/*                    <option key={index} value={service}>{service}</option>*/}
+                            {/*                ))}*/}
+                            {/*            </select>*/}
+                            {/*        </div>*/}
 
-                                    <div>
-                                        <label htmlFor="budget"
-                                               className="block text-sm font-medium text-gray-700 mb-2">
-                                            Project Budget
-                                        </label>
-                                        <select
-                                            id="budget"
-                                            name="budget"
-                                            value={formData.budget}
-                                            onChange={handleChange}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                                        >
-                                            <option value="">Select budget range</option>
-                                            {budgets.map((budget, index) => (
-                                                <option key={index} value={budget}>{budget}</option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                </div>
+                            {/*        <div>*/}
+                            {/*            <label htmlFor="budget"*/}
+                            {/*                   className="block text-sm font-medium text-gray-700 mb-2">*/}
+                            {/*                Project Budget*/}
+                            {/*            </label>*/}
+                            {/*            <select*/}
+                            {/*                id="budget"*/}
+                            {/*                name="budget"*/}
+                            {/*                value={formData.budget}*/}
+                            {/*                onChange={handleChange}*/}
+                            {/*                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"*/}
+                            {/*            >*/}
+                            {/*                <option value="">Select budget range</option>*/}
+                            {/*                {budgets.map((budget, index) => (*/}
+                            {/*                    <option key={index} value={budget}>{budget}</option>*/}
+                            {/*                ))}*/}
+                            {/*            </select>*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
 
-                                <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                                        Project Details *
-                                    </label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        required
-                                        rows={6}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                                        placeholder="Tell us about your project, goals, and any specific requirements..."
-                                    />
-                                </div>
+                            {/*    <div>*/}
+                            {/*        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">*/}
+                            {/*            Project Details **/}
+                            {/*        </label>*/}
+                            {/*        <textarea*/}
+                            {/*            id="message"*/}
+                            {/*            name="message"*/}
+                            {/*            value={formData.message}*/}
+                            {/*            onChange={handleChange}*/}
+                            {/*            required*/}
+                            {/*            rows={6}*/}
+                            {/*            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"*/}
+                            {/*            placeholder="Tell us about your project, goals, and any specific requirements..."*/}
+                            {/*        />*/}
+                            {/*    </div>*/}
 
-                                <button
-                                    type="submit"
-                                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center text-lg font-semibold"
-                                >
-                                    Send Message
-                                    <Send className="ml-2 h-5 w-5"/>
-                                </button>
+                            {/*    <button*/}
+                            {/*        type="submit"*/}
+                            {/*        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center text-lg font-semibold"*/}
+                            {/*    >*/}
+                            {/*        Send Message*/}
+                            {/*        <Send className="ml-2 h-5 w-5"/>*/}
+                            {/*    </button>*/}
 
-                                <input type="hidden" name="form-name" value="contact" />
-                                <input type="hidden" name="bot-field" />
-                            </form>
+                            {/*    <input type="hidden" name="form-name" value="contact" />*/}
+                            {/*    <input type="hidden" name="bot-field" />*/}
+                            {/*</form>*/}
+                            <iframe
+                                frameborder="0"
+                                marginheight="0"
+                                marginwidth="0"
+                                width="520"
+                                height="700"
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSf63ETuIE8tA4JNbr7hu7QFRWjpBRhKy933Pk3FSD8j6aCZpg/viewform?usp=header"
+
+                                ></iframe>
+
+
+
                         </div>
 
                         {/* Contact Information */}
