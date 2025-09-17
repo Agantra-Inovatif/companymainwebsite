@@ -58,21 +58,22 @@ const Web3Lab = () => {
                         A launchpad for dApps, DAOs, and digital assets—engineered for interoperability, privacy, and
                         AI-enhanced governance.
                     </p>
-                    {/*<div className="flex flex-col sm:flex-row gap-4 justify-center">*/}
-                    {/*    <Link*/}
-                    {/*        to="/services"*/}
-                    {/*        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"*/}
-                    {/*    >*/}
-                    {/*        Explore Services*/}
-                    {/*        <ArrowRight className="ml-2 h-5 w-5"/>*/}
-                    {/*    </Link>*/}
-                    {/*    <Link*/}
-                    {/*        to="/projects"*/}
-                    {/*        className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 inline-flex items-center justify-center"*/}
-                    {/*    >*/}
-                    {/*        View Projects*/}
-                    {/*    </Link>*/}
-                    {/*</div>*/}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link
+                            to="/contact"
+                            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+                        >
+                            Contact Us
+                            <ArrowRight className="ml-2 h-5 w-5"/>
+                        </Link>
+                        {/*<a*/}
+                        {/*    href="https://microsoft.com"*/}
+                        {/*    className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 inline-flex items-center justify-center"*/}
+                        {/*    target="_blank"*/}
+                        {/*>*/}
+                        {/*    View Web3 Lab*/}
+                        {/*</a>*/}
+                    </div>
                 </div>
             </section>
 

@@ -33,6 +33,10 @@ function App() {
 
                     <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
                     <Route path="/tos" element={<TermOfService/>}/>
+
+
+
+
                 </Routes>
                 <Footer/>
             </div>
