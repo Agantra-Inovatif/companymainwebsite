@@ -66,13 +66,13 @@ const Web3Lab = () => {
                             Contact Us
                             <ArrowRight className="ml-2 h-5 w-5"/>
                         </Link>
-                        {/*<a*/}
-                        {/*    href="https://microsoft.com"*/}
-                        {/*    className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 inline-flex items-center justify-center"*/}
-                        {/*    target="_blank"*/}
-                        {/*>*/}
-                        {/*    View Web3 Lab*/}
-                        {/*</a>*/}
+                        <a
+                            href="https://theweb3.org"
+                            className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 inline-flex items-center justify-center"
+                            target="_blank"
+                        >
+                            View Web3 Lab
+                        </a>
                     </div>
                 </div>
             </section>
