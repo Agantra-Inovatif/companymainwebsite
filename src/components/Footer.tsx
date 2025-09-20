@@ -23,18 +23,18 @@ const Footer = () => {
               Pioneering the convergence of AI and Web3 technologies to build tomorrow's digital experiences today.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              {/*<a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">*/}
+              {/*  <Twitter className="h-5 w-5" />*/}
+              {/*</a>*/}
+              <a href="https://www.linkedin.com/company/nextmantra-innovation/" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
-                <Github className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
-                <Mail className="h-5 w-5" />
-              </a>
+              {/*<a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">*/}
+              {/*  <Github className="h-5 w-5" />*/}
+              {/*</a>*/}
+              {/*<a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">*/}
+              {/*  <Mail className="h-5 w-5" />*/}
+              {/*</a>*/}
             </div>
           </div>
 
