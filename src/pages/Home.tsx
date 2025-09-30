@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {ArrowRight, Brain, Shield, Zap, Users, TrendingUp, Award} from 'lucide-react';
+import CookieConsentComponent from "./CookieConsentComponent.tsx";
 
 const Home = () => {
     const features = [
@@ -194,7 +195,10 @@ const Home = () => {
                     </Link>
                 </div>
             </section>
+
+            <CookieConsentComponent/>
         </div>
+
     );
 };
 
