@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Zap, Twitter, Linkedin, Github, Mail} from 'lucide-react';
 import ImageLogo from "../images/NextMantra-LogoOnly.png";
-import {SiPatreon,SiYoutube,SiOnlyfans} from '@icons-pack/react-simple-icons'
+import {SiPatreon, SiYoutube, SiOnlyfans} from '@icons-pack/react-simple-icons'
 
 
 const Footer = () => {
@@ -26,12 +26,14 @@ const Footer = () => {
                             experiences today.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="https://youtube.nextmantra.com" className="text-gray-300 hover:text-blue-400 transition-colors" target={"_blank"}>
-                              <SiYoutube className="h-5 w-5" />
-                            </a>
+
                             <a href="https://www.linkedin.com/company/nextmantra-innovation/"
                                className="text-gray-300 hover:text-blue-400 transition-colors" target={'_blank'}>
                                 <Linkedin className="h-5 w-5"/>
+                            </a>
+                            <a href="https://youtube.nextmantra.com"
+                               className="text-gray-300 hover:text-blue-400 transition-colors" target={"_blank"}>
+                                <SiYoutube className="h-5 w-5"/>
                             </a>
                             {/*<a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">*/}
                             {/*  <Github className="h-5 w-5" />*/}
