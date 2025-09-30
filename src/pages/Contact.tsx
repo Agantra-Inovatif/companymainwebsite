@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Mail, Phone, MapPin, Clock, Send, CheckCircle} from 'lucide-react';
+import '../googleformembed.css';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -228,17 +229,20 @@ const Contact = () => {
                             {/*    <input type="hidden" name="form-name" value="contact" />*/}
                             {/*    <input type="hidden" name="bot-field" />*/}
                             {/*</form>*/}
+
+                            <div className={'google-iframe-container'}>
+
                             <iframe
                                 frameborder="0"
                                 marginheight="0"
                                 marginwidth="0"
-                                width="520"
-                                height="700"
+                                height={'600'}
+                                width={'100%'}
                                 src="https://docs.google.com/forms/d/e/1FAIpQLSf63ETuIE8tA4JNbr7hu7QFRWjpBRhKy933Pk3FSD8j6aCZpg/viewform?usp=header"
 
-                                ></iframe>
+                                > Loading ..... </iframe>
 
-
+                            </div>
 
                         </div>
 
