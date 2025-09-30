@@ -10,8 +10,8 @@ const Navbar = () => {
     const navigation = [
         {name: 'Home', href: '/'},
         {name: 'Apps', href: '/apps'},
-        {name: 'AI Labs',href:'/ailabs'},
-        {name: 'Web3 Labs',href:'/web3labs'},
+        {name: 'AI Labs', href: '/ailabs'},
+        {name: 'Web3 Labs', href: '/web3labs'},
         {name: 'About', href: '/about'},
         {name: 'Contact', href: '/contact'},
     ];
@@ -21,15 +21,18 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-28">
                     <div className="flex items-center">
-                        <Link to="/" className="flex items-center space-x-2">
+                        <Link to="/" className="flex items-center space-x-2 mb-6">
                             {/*<div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">*/}
                             {/*    <Zap className="h-6 w-6 text-white"/>*/}
                             {/*   */}
                             {/*</div>*/}
                             <div>
-                                <img src={ImageLogo} alt="logo" style={{width:'100px'}}/>
+                                <img src={ImageLogo} alt="logo" style={{width: '100px'}}/>
                             </div>
-                            <span className="text-xl font-bold text-gray-900">Next Mantra</span>
+                            <div>
+                                <h1 className="text-xl font-bold text-gray-900">Next Mantra</h1>
+                                <p className={'font-bold text-sm text-gray-400'}>Innovation</p>
+                            </div>
                         </Link>
                     </div>
 
