@@ -63,7 +63,7 @@ const Contact = () => {
         {
             icon: <MapPin className="h-6 w-6"/>,
             title: "Linkedin",
-            details: "https://linkedin.com/company/NextMantra-Innovation",
+            details: "https://www.linkedin.com/company/agantra-inovatif",
             description: "Common"
         },
         {

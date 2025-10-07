@@ -19,7 +19,7 @@ const Footer = () => {
                             <div>
                                 <img src={ImageLogo} alt="logo" style={{width: '100px'}}/>
                             </div>
-                            <span className="text-xl font-bold">Next Mantra</span>
+                            <span className="text-xl font-bold">Agantra Inovatif</span>
                         </div>
                         <p className="text-gray-300 mb-4 max-w-md">
                             Pioneering the convergence of AI and Web3 technologies to build tomorrow's digital
@@ -27,7 +27,7 @@ const Footer = () => {
                         </p>
                         <div className="flex space-x-4">
 
-                            <a href="https://www.linkedin.com/company/nextmantra-innovation/"
+                            <a href="https://www.linkedin.com/company/agantra-inovatif"
                                className="text-gray-300 hover:text-blue-400 transition-colors" target={'_blank'}>
                                 <Linkedin className="h-5 w-5"/>
                             </a>
@@ -71,7 +71,7 @@ const Footer = () => {
                 <div
                     className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-gray-400 text-sm">
-                        © 2025 Next Mantra Innovation OU. All rights reserved.
+                        © 2025 Agantra Inovatif OU. All rights reserved.
                     </p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link to="/privacypolicy"
