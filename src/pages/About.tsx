@@ -59,7 +59,7 @@ const About = () => {
             <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">About Next Mantra</h1>
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6">About Agantra Inovatif OÜ</h1>
                         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
                             Our Leader and Team member for AI and Web3 Innovation
                         </p>
@@ -74,7 +74,7 @@ const About = () => {
                         <div>
                             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                                Founded in 2025, Next Mantra Innovation emerged from a simple belief: that the
+                                Founded in 2025, Agantra Inovatif emerged from a simple belief: that the
                                 convergence of artificial intelligence
                                 and blockchain technology would fundamentally transform how businesses operate and
                                 interact with their customers.

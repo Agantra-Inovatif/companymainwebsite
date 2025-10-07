@@ -73,11 +73,11 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            What is Next Mantra Innovation?
+                            What is Agantra Inovatif ?
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            We combined the wisdom of traditional thinking with rapid innovation for current and future
-                            challenge
+                            Very simple: We provide technology for you to make your life better, sleep well and less
+                            time with family.
                         </p>
                     </div>
 
@@ -123,7 +123,8 @@ const Home = () => {
                         AI Innovation Labs
                     </h2>
                     <p className="text-xl text-gray-600 mb-8">
-                       We develop our in-house or use AI Models and transforms into business usage. It will help business to create a new opportunity or cutting cost
+                        We develop our in-house or use AI Models and transforms into business usage. It will help
+                        business to create a new opportunity or cutting cost
                     </p>
                     <Link
                         to="/ailabs"
@@ -140,7 +141,10 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-4">Web 3.0 Innovation Labs</h2>
-                        <p className="text-xl opacity-90">The Web3.0 Innovation Lab at Next Mantra is where legacy systems evolve into trustless, interoperable ecosystems. Our platform empowers businesses to harness blockchain, smart contracts, and tokenization to unlock new models of ownership, governance, and engagement.</p>
+                        <p className="text-xl opacity-90">The Web3.0 Innovation Lab at Agantra Inovatif is where legacy
+                            systems evolve into trustless, interoperable ecosystems. Our platform empowers businesses to
+                            harness blockchain, smart contracts, and tokenization to unlock new models of ownership,
+                            governance, and engagement.</p>
                     </div>
                     <div className="text-center">
                         <Link
