@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Zap, Twitter, Linkedin, Github, Mail} from 'lucide-react';
-import ImageLogo from "../images/NextMantra-LogoOnly.png";
+import ImageLogo from "../images/Agantra-Inovatif-LogoOnly.png";
 import {SiPatreon, SiYoutube, SiOnlyfans} from '@icons-pack/react-simple-icons'
 
 
