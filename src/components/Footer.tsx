@@ -56,16 +56,17 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Services */}
-                    {/*<div>*/}
-                    {/*  <h3 className="text-lg font-semibold mb-4">Services</h3>*/}
-                    {/*  <ul className="space-y-2">*/}
-                    {/*    <li><span className="text-gray-300">AI Development</span></li>*/}
-                    {/*    <li><span className="text-gray-300">Blockchain Solutions</span></li>*/}
-                    {/*    <li><span className="text-gray-300">Smart Contracts</span></li>*/}
-                    {/*    <li><span className="text-gray-300">Consulting</span></li>*/}
-                    {/*  </ul>*/}
-                    {/*</div>*/}
+                    {/* Policies */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Policies</h3>
+                        <ul className="space-y-2">
+                            <li><Link to="/privacypolicy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+                            <li><Link to="/tos" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
+                            <li><Link to="/returnpolicy" className="text-gray-300 hover:text-blue-400 transition-colors">Return Policy</Link></li>
+                            <li><Link to="/refundpolicy" className="text-gray-300 hover:text-blue-400 transition-colors">Refund and Disputes Policy</Link></li>
+                            <li><Link to="/cancellationpolicy" className="text-gray-300 hover:text-blue-400 transition-colors">Cancellation Policy</Link></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div
@@ -73,15 +74,6 @@ const Footer = () => {
                     <p className="text-gray-400 text-sm">
                         © 2025 Agantra Inovatif OU. All rights reserved.
                     </p>
-                    <div className="flex space-x-6 mt-4 md:mt-0">
-                        <Link to="/privacypolicy"
-                              className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
-                            Privacy Policy
-                        </Link>
-                        <Link to="/tos" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
-                            Terms of Service
-                        </Link>
-                    </div>
                 </div>
             </div>
         </footer>

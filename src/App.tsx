@@ -12,7 +12,10 @@ import Contact from './pages/Contact';
 import AILabs from './pages/AILab';
 import Store from './pages/Store';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermOfService from './pages/TOS'
+import TermOfService from './pages/TOS';
+import ReturnPolicy from './pages/ReturnPolicy';
+import RefundPolicy from './pages/RefundPolicy';
+import CancellationPolicy from './pages/CancellationPolicy';
 
 function App() {
     return (
@@ -33,6 +36,9 @@ function App() {
 
                     <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
                     <Route path="/tos" element={<TermOfService/>}/>
+                    <Route path="/returnpolicy" element={<ReturnPolicy/>}/>
+                    <Route path="/refundpolicy" element={<RefundPolicy/>}/>
+                    <Route path="/cancellationpolicy" element={<CancellationPolicy/>}/>
 
 
                 </Routes>
