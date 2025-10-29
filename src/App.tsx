@@ -10,7 +10,7 @@ import Apps from './pages/Apps';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import AILabs from './pages/AILab';
-import Store from './pages/Store.tsx'
+import Store from './pages/Store';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermOfService from './pages/TOS'
 
