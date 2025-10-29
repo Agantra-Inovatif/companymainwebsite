@@ -1,15 +1,106 @@
 import React from 'react';
+import { ShoppingCart, CheckCircle } from 'lucide-react';
 
 const Store = () => {
+    const products = [
+        {
+            name: "Agantra Inovatif T-Shirt",
+            price: "$25.00",
+            image: "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
+        },
+        {
+            name: "Agantra Inovatif Hoodie",
+            price: "$45.00",
+            image: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
+        },
+        {
+            name: "Agantra Inovatif Sweatshirt",
+            price: "$35.00",
+            image: "https://images.pexels.com/photos/2060239/pexels-photo-2060239.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
+        },
+        {
+            name: "Agantra Inovatif Long Sleeve",
+            price: "$30.00",
+            image: "https://images.pexels.com/photos/2294353/pexels-photo-2294353.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
+        },
+        {
+            name: "Agantra Inovatif Tank Top",
+            price: "$20.00",
+            image: "https://images.pexels.com/photos/1289129/pexels-photo-1289129.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
+        },
+        {
+            name: "Agantra Inovatif Beanie",
+            price: "$15.00",
+            image: "https://images.pexels.com/photos/1597439/pexels-photo-1597439.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
+        },
+        {
+            name: "Agantra Inovatif Cap",
+            price: "$22.00",
+            image: "https://images.pexels.com/photos/1878821/pexels-photo-1878821.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
+        },
+        {
+            name: "Agantra Inovatif Tote Bag",
+            price: "$18.00",
+            image: "https://images.pexels.com/photos/1289129/pexels-photo-1289129.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            stripeLink: "https://buy.stripe.com/test_dR65nqb8w8ti2o8001"
+        },
+        {
+            name: "Agantra Inovatif Backpack",
+            price: "$55.00",
+            image: "https://images.pexels.com/photos/1545400/pexels-photo-1545400.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            stripeLink: "https://buy.stripe.com/test_dR65nqb8w8ti2o8001"
+        }
+    ];
+
+    const subscriptions = [
+        {
+            name: "Basic AI Chat",
+            price: "$10/month",
+            features: [
+                "1,000 messages/month",
+                "Standard AI model",
+                "Community support"
+            ],
+            stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
+        },
+        {
+            name: "Pro AI Chat",
+            price: "$25/month",
+            features: [
+                "5,000 messages/month",
+                "Advanced AI model",
+                "Priority support"
+            ],
+            stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
+        },
+        {
+            name: "Enterprise AI Chat",
+            price: "Contact Us",
+            features: [
+                "Unlimited messages",
+                "Custom AI model",
+                "Dedicated support"
+            ],
+            stripeLink: "/contact"
+        }
+    ];
+
     return (
-        <div className="bg-white">
+        <div className="bg-gray-50">
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        opacity:0.5,
+                        opacity: 0.5,
                         backgroundImage: "url('https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"
                     }}
                 ></div>
@@ -20,19 +111,65 @@ const Store = () => {
                             className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Store</span>
                     </h1>
                     <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-                        Find our latest products, service and merchandise here
+                        Find our latest products, services, and merchandise here.
                     </p>
                 </div>
             </section>
 
-            {/* Store Content Section */}
+            {/* Subscriptions Section */}
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Coming Soon</h2>
-                        <p className="text-lg text-gray-600">
-                            Our store is currently under construction. Please check back later for our exciting new products!
-                        </p>
+                    <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">AI Chat Subscriptions</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {subscriptions.map((sub, index) => (
+                            <div key={index} className="bg-white rounded-2xl shadow-lg p-8 flex flex-col">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4">{sub.name}</h3>
+                                <p className="text-4xl font-bold text-gray-900 mb-6">{sub.price}</p>
+                                <ul className="space-y-4 text-gray-600 mb-8 flex-grow">
+                                    {sub.features.map((feature, i) => (
+                                        <li key={i} className="flex items-center">
+                                            <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                                            {feature}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <a
+                                    href={sub.stripeLink}
+                                    target={sub.name === 'Enterprise AI Chat' ? '_self' : '_blank'}
+                                    rel="noopener noreferrer"
+                                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center text-lg font-semibold mt-auto"
+                                >
+                                    {sub.name === 'Enterprise AI Chat' ? 'Contact Us' : 'Subscribe'}
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Products Section */}
+            <section className="py-20 bg-gray-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Merchandise</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {products.map((product, index) => (
+                            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                                <img src={product.image} alt={product.name} className="w-full h-80 object-cover"/>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
+                                    <p className="text-lg text-gray-700 mb-4">{product.price}</p>
+                                    <a
+                                        href={product.stripeLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center text-lg font-semibold"
+                                    >
+                                        <ShoppingCart className="mr-2 h-5 w-5" />
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
