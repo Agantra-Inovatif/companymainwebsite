@@ -73,11 +73,14 @@ const About = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                            <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
                                 Founded in 2025, Agantra Inovatif emerged from a simple belief: that artificial intelligence would fundamentally transform how businesses operate and
                                 interact with their customers.
                             </p>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                            <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
+                                The name "Agantra" is a fusion of "Agami," meaning future, and "Mantra," a sacred utterance. It represents our evolution from our previous brand, NextMantra, signifying our commitment to chanting the future of innovation.
+                            </p>
+                            <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
                                 What started as a small team of passionate developers has grown into an innovation lab,
                                 helping business across industries harness the power of emerging technologies to solve
                                 complex challenges
