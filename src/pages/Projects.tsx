@@ -14,16 +14,6 @@ const Projects = () => {
       github: "#"
     },
     {
-      title: "Decentralized Supply Chain",
-      category: "Blockchain & Logistics",
-      description: "Transparent supply chain management system using blockchain technology for tracking goods from origin to consumer.",
-      image: "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Solidity", "Ethereum", "Web3.js", "React", "IPFS"],
-      results: ["100% traceability", "30% cost reduction", "Zero counterfeits"],
-      link: "#",
-      github: "#"
-    },
-    {
       title: "Smart Healthcare Assistant",
       category: "AI & Healthcare",
       description: "AI-powered healthcare assistant providing personalized medical recommendations and appointment scheduling.",
@@ -34,32 +24,12 @@ const Projects = () => {
       github: "#"
     },
     {
-      title: "NFT Marketplace",
-      category: "Web3 & Digital Art",
-      description: "Full-featured NFT marketplace with minting, trading, and royalty distribution capabilities.",
-      image: "https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Solidity", "Next.js", "Ethereum", "IPFS", "Moralis"],
-      results: ["$2M+ in transactions", "5000+ NFTs minted", "95% user retention"],
-      link: "#",
-      github: "#"
-    },
-    {
       title: "Predictive Analytics Dashboard",
       category: "AI & Business Intelligence",
       description: "Real-time analytics dashboard using AI to predict business trends and optimize operations.",
       image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
       technologies: ["Python", "Scikit-learn", "D3.js", "Flask", "Redis"],
       results: ["25% revenue increase", "Real-time insights", "Custom ML models"],
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "DeFi Lending Protocol",
-      category: "DeFi & Blockchain",
-      description: "Decentralized lending protocol with automated market making and yield optimization strategies.",
-      image: "https://images.pexels.com/photos/7567565/pexels-photo-7567565.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Solidity", "Hardhat", "React", "Web3.js", "Chainlink"],
-      results: ["$50M+ TVL", "15% APY average", "Security audited"],
       link: "#",
       github: "#"
     }
@@ -78,7 +48,7 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Projects</h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12">
-            Explore our portfolio of innovative AI and Web3 solutions that have transformed businesses across industries.
+            Explore our portfolio of innovative AI solutions that have transformed businesses across industries.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -169,7 +139,7 @@ const Projects = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Have a Project in Mind?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Let's work together to bring your innovative ideas to life with cutting-edge AI and Web3 technologies.
+            Let's work together to bring your innovative ideas to life with cutting-edge AI technologies.
           </p>
           <button className="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105">
             Start Your Project

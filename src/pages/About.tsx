@@ -8,7 +8,7 @@ const About = () => {
             name: "Nicko",
             role: "Co-Founder",
             image: require("../images/headshot-nicko.jpg"),
-            description: "Total 20 years of experiences in Fintech, Blockchain and Web3 "
+            description: "Total 20 years of experiences in Fintech and AI "
         },
         {
             name: "Airlangga",
@@ -39,7 +39,7 @@ const About = () => {
         {
             icon: <Lightbulb className="h-8 w-8"/>,
             title: "Innovation First",
-            description: "Constantly pushing boundaries and exploring new possibilities in AI and Web3."
+            description: "Constantly pushing boundaries and exploring new possibilities in AI."
         },
         {
             icon: <Users className="h-8 w-8"/>,
@@ -61,7 +61,7 @@ const About = () => {
                     <div className="text-center">
                         <h1 className="text-5xl md:text-6xl font-bold mb-6">About Agantra Inovatif OÜ</h1>
                         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-                            Our Leader and Team member for AI and Web3 Innovation
+                            Our Leader and Team member for AI Innovation
                         </p>
                     </div>
                 </div>
@@ -74,9 +74,7 @@ const About = () => {
                         <div>
                             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                                Founded in 2025, Agantra Inovatif emerged from a simple belief: that the
-                                convergence of artificial intelligence
-                                and blockchain technology would fundamentally transform how businesses operate and
+                                Founded in 2025, Agantra Inovatif emerged from a simple belief: that artificial intelligence would fundamentally transform how businesses operate and
                                 interact with their customers.
                             </p>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">

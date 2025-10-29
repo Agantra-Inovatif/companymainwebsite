@@ -3,25 +3,16 @@ import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
 
 const Blog = () => {
   const featured = {
-    title: "The Future of AI in Decentralized Finance",
-    excerpt: "Exploring how artificial intelligence is revolutionizing DeFi protocols, from automated market making to risk assessment and yield optimization strategies.",
+    title: "The Future of AI in Business Intelligence",
+    excerpt: "Exploring how artificial intelligence is revolutionizing Business Intelligence, from automated data analysis to predictive insights and automated reporting.",
     image: "https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
     author: "Alex Chen",
     date: "January 15, 2025",
     readTime: "8 min read",
-    category: "AI & DeFi"
+    category: "AI & Business"
   };
 
   const posts = [
-    {
-      title: "Building Scalable Smart Contracts for Enterprise",
-      excerpt: "Best practices and architectural patterns for developing smart contracts that can handle enterprise-level transaction volumes.",
-      image: "https://images.pexels.com/photos/7567565/pexels-photo-7567565.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      author: "Sarah Johnson",
-      date: "January 12, 2025",
-      readTime: "6 min read",
-      category: "Blockchain"
-    },
     {
       title: "Machine Learning Operations in Production",
       excerpt: "A comprehensive guide to deploying and maintaining ML models in production environments with continuous monitoring.",
@@ -32,8 +23,8 @@ const Blog = () => {
       category: "AI/ML"
     },
     {
-      title: "Web3 Security: Protecting Digital Assets",
-      excerpt: "Essential security practices for Web3 applications, from smart contract audits to wallet security and user protection.",
+      title: "AI-Powered Threat Detection",
+      excerpt: "Essential security practices for using AI to detect and respond to cybersecurity threats in real-time.",
       image: "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       author: "Emily Davis",
       date: "January 8, 2025",
@@ -41,35 +32,17 @@ const Blog = () => {
       category: "Security"
     },
     {
-      title: "The Rise of Decentralized AI Networks",
-      excerpt: "How blockchain technology is enabling new forms of distributed artificial intelligence and democratizing AI access.",
+      title: "The Rise of Generative AI",
+      excerpt: "How generative AI is enabling new forms of content creation and democratizing creativity.",
       image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       author: "Alex Chen",
       date: "January 5, 2025",
       readTime: "9 min read",
-      category: "AI & Web3"
+      category: "AI"
     },
-    {
-      title: "NFT Utility Beyond Digital Art",
-      excerpt: "Exploring practical applications of NFTs in identity verification, supply chain management, and digital rights.",
-      image: "https://images.pexels.com/photos/8369648/pexels-photo-8369648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      author: "Sarah Johnson",
-      date: "January 3, 2025",
-      readTime: "5 min read",
-      category: "NFTs"
-    },
-    {
-      title: "Optimizing Gas Fees in Ethereum Applications",
-      excerpt: "Strategies and techniques for reducing transaction costs while maintaining performance in Ethereum-based applications.",
-      image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      author: "Michael Rodriguez",
-      date: "December 30, 2024",
-      readTime: "8 min read",
-      category: "Ethereum"
-    }
   ];
 
-  const categories = ["All", "AI/ML", "Blockchain", "DeFi", "NFTs", "Security", "Web3"];
+  const categories = ["All", "AI/ML", "Security", "AI"];
 
   return (
     <div>
@@ -78,7 +51,7 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Blog & Insights</h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Stay ahead of the curve with our latest insights on AI, blockchain, and emerging technologies.
+            Stay ahead of the curve with our latest insights on AI and emerging technologies.
           </p>
         </div>
       </section>
@@ -206,7 +179,7 @@ const Blog = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
           <p className="text-xl mb-8 opacity-90">
-            Subscribe to our newsletter for the latest insights on AI, blockchain, and emerging technologies.
+            Subscribe to our newsletter for the latest insights on AI and emerging technologies.
           </p>
           <div className="flex flex-col sm:flex-row max-w-lg mx-auto gap-4">
             <input

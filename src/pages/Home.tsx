@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {ArrowRight, Brain, Shield, Zap, Users, TrendingUp, Award} from 'lucide-react';
+import {ArrowRight, Brain, Zap, Users, TrendingUp, Award, Cpu} from 'lucide-react';
 import CookieConsentComponent from "./CookieConsentComponent.tsx";
 
 const Home = () => {
@@ -11,23 +11,34 @@ const Home = () => {
             description: "Cutting-edge artificial intelligence solutions that transform businesses and enhance human capabilities."
         },
         {
-            icon: <Shield className="h-8 w-8"/>,
-            title: "Web3 Innovation",
-            description: "Innovate legacy web and transform into decentralized web technology."
+            icon: <Cpu className="h-8 w-8"/>,
+            title: "Custom AI Models",
+            description: "We build and train custom AI models tailored to your specific business needs and data."
         },
         {
             icon: <Zap className="h-8 w-8"/>,
             title: "Rapid Development and Integration",
-            description: "Integrate legacy technology with AI and Web3 to control cost and bring innovation to organization."
+            description: "Integrate legacy technology with AI to control cost and bring innovation to your organization."
         }
     ];
 
-    // const stats = [
-    //   { number: "100+", label: "Projects Delivered" },
-    //   { number: "50+", label: "Happy Clients" },
-    //   { number: "95%", label: "Success Rate" },
-    //   { number: "24/7", label: "Support" }
-    // ];
+    const whyChooseUs = [
+        {
+            icon: <Users className="h-8 w-8" />,
+            title: "Expert Team",
+            description: "Our team consists of leading experts in AI, dedicated to delivering excellence."
+        },
+        {
+            icon: <TrendingUp className="h-8 w-8" />,
+            title: "Innovative Solutions",
+            description: "We provide creative and effective AI solutions that are tailored to your specific business needs."
+        },
+        {
+            icon: <Award className="h-8 w-8" />,
+            title: "Proven Results",
+            description: "Our track record of successful AI projects and satisfied clients speaks for itself."
+        }
+    ];
 
     return (
         <div>
@@ -47,24 +58,8 @@ const Home = () => {
                             className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Innovation</span>
                     </h1>
                     <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-                        Pioneering the convergence of AI and Web3 technologies to build tomorrow's digital experiences
-                        today.
+                        Harnessing deep artificial intelligence to design, shape, and deliver the most advanced digital experiences of tomorrow.
                     </p>
-                    {/*<div className="flex flex-col sm:flex-row gap-4 justify-center">*/}
-                    {/*  <Link*/}
-                    {/*    to="/services"*/}
-                    {/*    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"*/}
-                    {/*  >*/}
-                    {/*    Explore Services*/}
-                    {/*    <ArrowRight className="ml-2 h-5 w-5" />*/}
-                    {/*  </Link>*/}
-                    {/*  <Link*/}
-                    {/*    to="/projects"*/}
-                    {/*    className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 inline-flex items-center justify-center"*/}
-                    {/*  >*/}
-                    {/*    View Projects*/}
-                    {/*  </Link>*/}
-                    {/*</div>*/}
                 </div>
             </section>
 
@@ -76,8 +71,7 @@ const Home = () => {
                             What is Agantra Inovatif ?
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Very simple: We provide technology for you to make your life better, sleep well and less
-                            time with family.
+                            Very simple: We provide AI technology to make your life better, sleep well and spend more time with family.
                         </p>
                     </div>
 
@@ -97,27 +91,36 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Stats Section */}
-            {/*<section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">*/}
-            {/*  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">*/}
-            {/*    <div className="text-center mb-16">*/}
-            {/*      <h2 className="text-4xl font-bold mb-4">Proven Track Record</h2>*/}
-            {/*      <p className="text-xl opacity-90">Numbers that speak for our commitment to excellence</p>*/}
-            {/*    </div>*/}
+            {/* Why Choose Us Section */}
+            <section className="py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                            Why Choose Us?
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                            We are your trusted partner in navigating the complexities of Artificial Intelligence.
+                        </p>
+                    </div>
 
-            {/*    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">*/}
-            {/*      {stats.map((stat, index) => (*/}
-            {/*        <div key={index} className="text-center">*/}
-            {/*          <div className="text-5xl font-bold mb-2">{stat.number}</div>*/}
-            {/*          <div className="text-lg opacity-90">{stat.label}</div>*/}
-            {/*        </div>*/}
-            {/*      ))}*/}
-            {/*    </div>*/}
-            {/*  </div>*/}
-            {/*</section>*/}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {whyChooseUs.map((item, index) => (
+                            <div key={index}
+                                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div
+                                    className="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-white mb-6">
+                                    {item.icon}
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* AI Labs Section */}
-            <section className="py-20">
+            <section className="py-20 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-900 mb-6">
                         AI Innovation Labs
@@ -136,37 +139,13 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Web 3 Labs Section */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-4">Web 3.0 Innovation Labs</h2>
-                        <p className="text-xl opacity-90">The Web3.0 Innovation Lab at Agantra Inovatif is where legacy
-                            systems evolve into trustless, interoperable ecosystems. Our platform empowers businesses to
-                            harness blockchain, smart contracts, and tokenization to unlock new models of ownership,
-                            governance, and engagement.</p>
-                    </div>
-                    <div className="text-center">
-                        <Link
-                            to="/web3labs"
-                            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center"
-                        >
-                            Visit Web3 Labs
-                            <ArrowRight className="ml-2 h-5 w-5"/>
-                        </Link>
-                    </div>
-                </div>
-            </section>
-
-
             {/* Apps Section */}
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-4">Apps</h2>
                         <p className="text-xl opacity-90">We will create several apps innovation to start our journey.
-                            Several Apps that meet the challenges</p>
-                    </div>
+                            Several Apps that meet the challenges</p>                    </div>
                     <div className="text-center">
                         <Link
                             to="/apps"
@@ -181,13 +160,13 @@ const Home = () => {
 
 
             {/* CTA Section */}
-            <section className="py-20">
+            <section className="py-20 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-900 mb-6">
                         Ready to Transform Your Business?
                     </h2>
                     <p className="text-xl text-gray-600 mb-8">
-                        Let's discuss how AI and Web3 technologies can revolutionize your operations and create new
+                        Let's discuss how AI can revolutionize your operations and create new
                         opportunities for growth.
                     </p>
                     <Link

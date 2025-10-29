@@ -22,7 +22,7 @@ const Footer = () => {
                             <span className="text-xl font-bold">Agantra Inovatif</span>
                         </div>
                         <p className="text-gray-300 mb-4 max-w-md">
-                            Pioneering the convergence of AI and Web3 technologies to build tomorrow's digital
+                            Pioneering AI technologies to build tomorrow's digital
                             experiences today.
                         </p>
                         <div className="flex space-x-4">
