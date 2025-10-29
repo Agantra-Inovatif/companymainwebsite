@@ -9,7 +9,8 @@ const Apps = () => {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: "url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"
+                        opacity: 0.5,
+                        backgroundImage: "url('https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"
                     }}
                 ></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -18,7 +19,7 @@ const Apps = () => {
                         <span
                             className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Apps</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                    <p className="text-xl md:text-2xl  bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent  max-w-3xl mx-auto">
                         Discover our innovative applications designed to solve real-world problems.
                     </p>
                 </div>

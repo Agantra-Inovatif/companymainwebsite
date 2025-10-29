@@ -27,11 +27,11 @@ const Navbar = () => {
                             {/*   */}
                             {/*</div>*/}
                             <div>
-                                <img src={ImageLogo} alt="logo" style={{width: '100px'}}/>
+                                <img src={ImageLogo} alt="logo" style={{width: '50px'}}/>
                             </div>
                             <div>
-                                <h1 className="text-xl font-bold text-gray-900">Agantra </h1>
-                                <p className={'font-bold text-sm text-gray-400'}>Inovatif</p>
+                                <h1 className="text-xl font-bold text-gray-900">Agantra Inovatif</h1>
+                                {/*<p className={'font-bold text-sm text-gray-400'}>Inovatif</p>*/}
                             </div>
                         </Link>
                     </div>

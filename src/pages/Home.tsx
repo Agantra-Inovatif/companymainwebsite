@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {ArrowRight, Brain, Zap, Users, TrendingUp, Award, Cpu} from 'lucide-react';
 import CookieConsentComponent from "../components/CookieConsentComponent.tsx";

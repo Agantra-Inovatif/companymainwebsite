@@ -17,7 +17,7 @@ const Footer = () => {
                             {/*  <Zap className="h-6 w-6 text-white" />*/}
                             {/*</div>*/}
                             <div>
-                                <img src={ImageLogo} alt="logo" style={{width: '100px'}}/>
+                                <img src={ImageLogo} alt="logo" style={{width: '50px'}}/>
                             </div>
                             <span className="text-xl font-bold">Agantra Inovatif</span>
                         </div>
