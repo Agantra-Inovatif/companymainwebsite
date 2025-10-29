@@ -10,6 +10,7 @@ import Apps from './pages/Apps';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import AILabs from './pages/AILab';
+import Store from './pages/Store.tsx'
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermOfService from './pages/TOS'
 
@@ -27,12 +28,11 @@ function App() {
                     <Route path="/blog" element={<Blog/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/ailabs" element={<AILabs/>}/>
+                    <Route path='/store' element={<Store/>}/>
 
 
                     <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
                     <Route path="/tos" element={<TermOfService/>}/>
-
-
 
 
                 </Routes>
