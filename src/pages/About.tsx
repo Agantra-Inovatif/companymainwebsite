@@ -6,7 +6,7 @@ const About = () => {
     const team = [
         {
             name: "Nicko",
-            role: "Co-Founder",
+            role: "Founder",
             image: require("../assets/headshot-nicko.jpg"),
             description: "Total 20 years of experiences in Fintech and AI "
         },
