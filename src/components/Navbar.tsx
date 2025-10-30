@@ -5,8 +5,8 @@ import ImageLogo from "../assets/Agantra-Inovatif-LogoOnly.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [labsMenuOpen, setLabsMenuOpen] = useState(false);
     const location = useLocation();
+    const [openMenu, setOpenMenu] = useState<string | null>(null);
 
     const navigation = [
         {name: 'Home', href: '/'},
@@ -18,13 +18,18 @@ const Navbar = () => {
             ]
         },
         {name: 'Store', href: '/store'},
-        {name: 'About', href: '/about'},
-        {name: 'Contact', href: '/contact'},
+        {
+            name: 'Company',
+            children: [
+                {name: 'About', href: '/about'},
+                {name: 'Contact', href: '/contact'},
+            ]
+        }
     ];
 
     const closeAllMenus = () => {
         setIsOpen(false);
-        setLabsMenuOpen(false);
+        setOpenMenu(null);
     };
 
     return (
@@ -51,7 +56,7 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center space-x-8">
                         {navigation.map((item) =>
                             item.children ? (
-                                <div key={item.name} className="relative" onMouseEnter={() => setLabsMenuOpen(true)} onMouseLeave={() => setLabsMenuOpen(false)}>
+                                <div key={item.name} className="relative" onMouseEnter={() => setOpenMenu(item.name)} onMouseLeave={() => setOpenMenu(null)}>
                                     <div
                                         className={`flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none ${
                                             item.children.some(child => location.pathname === child.href)
@@ -61,9 +66,9 @@ const Navbar = () => {
                                         aria-haspopup="true"
                                     >
                                         {item.name}
-                                        <ChevronDown className={`h-4 w-4 ml-1 transition-transform duration-200 ${labsMenuOpen ? 'rotate-180' : ''}`}/>
+                                        <ChevronDown className={`h-4 w-4 ml-1 transition-transform duration-200 ${openMenu === item.name ? 'rotate-180' : ''}`}/>
                                     </div>                                    
-                                    {labsMenuOpen && (
+                                    {openMenu === item.name && (
                                         <div
                                             className="absolute -left-4 top-full pt-2 w-48"
                                         >
@@ -73,7 +78,7 @@ const Navbar = () => {
                                                         key={child.name}
                                                         to={child.href}
                                                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                        onClick={closeAllMenus}
+                                                        onClick={() => setOpenMenu(null)}
                                                     >
                                                         {child.name}
                                                     </Link>
@@ -119,13 +124,13 @@ const Navbar = () => {
                                 item.children ? (
                                     <div key={item.name}>
                                         <button
-                                            onClick={() => setLabsMenuOpen(!labsMenuOpen)}
+                                            onClick={() => setOpenMenu(openMenu === item.name ? null : item.name)}
                                             className="w-full flex justify-between items-center px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                                         >
                                             {item.name}
-                                            <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${labsMenuOpen ? 'rotate-180' : ''}`}/>
+                                            <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${openMenu === item.name ? 'rotate-180' : ''}`}/>
                                         </button>
-                                        {labsMenuOpen && (
+                                        {openMenu === item.name && (
                                             <div className="pl-4">
                                                 {item.children.map((child) => (
                                                     <Link
