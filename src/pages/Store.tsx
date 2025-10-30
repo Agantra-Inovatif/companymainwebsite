@@ -48,37 +48,37 @@ const Store = () => {
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Agantra Inovatif Long Sleeve",
+            name: "Long Sleeve",
             price: "$30.00",
             images: ["https://images.pexels.com/photos/2313192/pexels-photo-2313192.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Agantra Inovatif Tank Top",
+            name: "Tank Top",
             price: "$20.00",
             images: ["https://images.pexels.com/photos/1865131/pexels-photo-1865131.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Agantra Inovatif Beanie",
+            name: "Beanie",
             price: "$15.00",
             images: ["https://images.pexels.com/photos/569169/pexels-photo-569169.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Agantra Inovatif Cap",
+            name: " Cap",
             price: "$22.00",
             images: ["https://images.pexels.com/photos/1460036/pexels-photo-1460036.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Agantra Inovatif Tote Bag",
+            name: "Tote Bag",
             price: "$18.00",
             images: ["https://images.pexels.com/photos/1214212/pexels-photo-1214212.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_dR65nqb8w8ti2o8001"
         },
         {
-            name: "Agantra Inovatif Backpack",
+            name: "Backpack",
             price: "$55.00",
             images: ["https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_dR65nqb8w8ti2o8001"
