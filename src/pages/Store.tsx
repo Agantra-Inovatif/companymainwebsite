@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingCart, CheckCircle } from 'lucide-react';
+import {ShoppingCart, CheckCircle} from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -12,6 +12,8 @@ import HoodieAgantraLogo from '../store/assets/Hoodie-Agantra-Logo.png';
 import HoodieAgantraLogoWesternBoy from '../store/assets/Hoodie-Agantra-Logo-WesternBoy.png';
 import HoodieAgantraLogoAsianGirl from '../store/assets/Hoddie-Agantra-Logo-AsianGirl.png';
 
+import SweatshirtAgantraLogoAsianGirl from '../store/assets/SweatShirt-Agantra-Logo-AsianGirl.png';
+import SweatshirtAgantraLogoWesternMan from '../store/assets/SweatShirt-Agantra-Logo-WesternMan.png';
 
 
 const Store = () => {
@@ -37,9 +39,12 @@ const Store = () => {
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Agantra Inovatif Sweatshirt",
+            name: "Proud in sweat shirt",
             price: "$35.00",
-            images: ["https://images.pexels.com/photos/189199/pexels-photo-189199.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
+            images: [
+                SweatshirtAgantraLogoAsianGirl,
+                SweatshirtAgantraLogoWesternMan
+            ],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
@@ -122,7 +127,7 @@ const Store = () => {
         arrows: true,
         autoplay: true,
         autoplaySpeed: 1000,
-        fade:false
+        fade: false
     };
 
     return (
@@ -161,7 +166,7 @@ const Store = () => {
                                 <ul className="space-y-4 text-gray-600 mb-8 flex-grow">
                                     {sub.features.map((feature, i) => (
                                         <li key={i} className="flex items-center">
-                                            <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                                            <CheckCircle className="h-5 w-5 text-green-500 mr-3"/>
                                             {feature}
                                         </li>
                                     ))}
@@ -192,12 +197,14 @@ const Store = () => {
                                     <Slider {...sliderSettings}>
                                         {product.images.map((image, i) => (
                                             <div key={i}>
-                                                <img src={image} alt={`${product.name} ${i + 1}`} className="w-full h-80 object-contain"/>
+                                                <img src={image} alt={`${product.name} ${i + 1}`}
+                                                     className="w-full h-80 object-contain"/>
                                             </div>
                                         ))}
                                     </Slider>
                                 ) : (
-                                    <img src={product.images[0]} alt={product.name} className="w-full h-80 object-contain"/>
+                                    <img src={product.images[0]} alt={product.name}
+                                         className="w-full h-80 object-contain"/>
                                 )}
                                 <div className="p-6">
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
@@ -208,7 +215,7 @@ const Store = () => {
                                         rel="noopener noreferrer"
                                         className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center text-lg font-semibold"
                                     >
-                                        <ShoppingCart className="mr-2 h-5 w-5" />
+                                        <ShoppingCart className="mr-2 h-5 w-5"/>
                                         Buy Now
                                     </a>
                                 </div>
