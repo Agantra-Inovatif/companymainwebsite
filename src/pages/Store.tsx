@@ -1,60 +1,81 @@
 import React from 'react';
-import {ShoppingCart, CheckCircle} from 'lucide-react';
+import { ShoppingCart, CheckCircle } from 'lucide-react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
+import TShirtAgantraWesternBoy from "../store/assets/TShirt-Agantra-Logo-WesternMan.png";
+import TShirtAgantraAsianGirl from "../store/assets/TShirt-Agantra-Logo-AsianGirl.png";
+
+import HoodieAgantraLogo from '../store/assets/Hoodie-Agantra-Logo.png';
+import HoodieAgantraLogoWesternBoy from '../store/assets/Hoodie-Agantra-Logo-WesternBoy.png';
+import HoodieAgantraLogoAsianGirl from '../store/assets/Hoddie-Agantra-Logo-AsianGirl.png';
+
+
 
 const Store = () => {
     const products = [
         {
-            name: "Agantra Inovatif T-Shirt",
+            name: "Our T-Shirt",
             price: "$25.00",
-            image: "https://images.pexels.com/photos/991509/pexels-photo-991509.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            images: [
+                TShirtAgantraWesternBoy,
+                TShirtAgantraAsianGirl,
+
+            ],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Agantra Inovatif Hoodie",
+            name: "Our Hoodie",
             price: "$45.00",
-            image: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            images: [
+                HoodieAgantraLogo,
+                HoodieAgantraLogoWesternBoy,
+                HoodieAgantraLogoAsianGirl
+            ],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
             name: "Agantra Inovatif Sweatshirt",
             price: "$35.00",
-            image: "https://images.pexels.com/photos/189199/pexels-photo-189199.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            images: ["https://images.pexels.com/photos/189199/pexels-photo-189199.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
             name: "Agantra Inovatif Long Sleeve",
             price: "$30.00",
-            image: "https://images.pexels.com/photos/2313192/pexels-photo-2313192.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            images: ["https://images.pexels.com/photos/2313192/pexels-photo-2313192.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
             name: "Agantra Inovatif Tank Top",
             price: "$20.00",
-            image: "https://images.pexels.com/photos/1865131/pexels-photo-1865131.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            images: ["https://images.pexels.com/photos/1865131/pexels-photo-1865131.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
             name: "Agantra Inovatif Beanie",
             price: "$15.00",
-            image: "https://images.pexels.com/photos/569169/pexels-photo-569169.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            images: ["https://images.pexels.com/photos/569169/pexels-photo-569169.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
             name: "Agantra Inovatif Cap",
             price: "$22.00",
-            image: "https://images.pexels.com/photos/1460036/pexels-photo-1460036.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            images: ["https://images.pexels.com/photos/1460036/pexels-photo-1460036.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
             name: "Agantra Inovatif Tote Bag",
             price: "$18.00",
-            image: "https://images.pexels.com/photos/1214212/pexels-photo-1214212.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            images: ["https://images.pexels.com/photos/1214212/pexels-photo-1214212.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_dR65nqb8w8ti2o8001"
         },
         {
             name: "Agantra Inovatif Backpack",
             price: "$55.00",
-            image: "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+            images: ["https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_dR65nqb8w8ti2o8001"
         }
     ];
@@ -92,6 +113,18 @@ const Store = () => {
         }
     ];
 
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 3000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        fade:false
+    };
+
     return (
         <div className="bg-gray-50">
             {/* Hero Section */}
@@ -128,7 +161,7 @@ const Store = () => {
                                 <ul className="space-y-4 text-gray-600 mb-8 flex-grow">
                                     {sub.features.map((feature, i) => (
                                         <li key={i} className="flex items-center">
-                                            <CheckCircle className="h-5 w-5 text-green-500 mr-3"/>
+                                            <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
                                             {feature}
                                         </li>
                                     ))}
@@ -155,7 +188,17 @@ const Store = () => {
                         {products.map((product, index) => (
                             <div key={index}
                                  className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                                <img src={product.image} alt={product.name} className="w-full h-80 object-cover"/>
+                                {product.images.length > 1 ? (
+                                    <Slider {...sliderSettings}>
+                                        {product.images.map((image, i) => (
+                                            <div key={i}>
+                                                <img src={image} alt={`${product.name} ${i + 1}`} className="w-full h-80 object-contain"/>
+                                            </div>
+                                        ))}
+                                    </Slider>
+                                ) : (
+                                    <img src={product.images[0]} alt={product.name} className="w-full h-80 object-contain"/>
+                                )}
                                 <div className="p-6">
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
                                     <p className="text-lg text-gray-700 mb-4">{product.price}</p>
@@ -165,7 +208,7 @@ const Store = () => {
                                         rel="noopener noreferrer"
                                         className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center text-lg font-semibold"
                                     >
-                                        <ShoppingCart className="mr-2 h-5 w-5"/>
+                                        <ShoppingCart className="mr-2 h-5 w-5" />
                                         Buy Now
                                     </a>
                                 </div>

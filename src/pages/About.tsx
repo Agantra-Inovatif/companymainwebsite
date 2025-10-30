@@ -7,13 +7,13 @@ const About = () => {
         {
             name: "Nicko",
             role: "Co-Founder",
-            image: require("../images/headshot-nicko.jpg"),
+            image: require("../assets/headshot-nicko.jpg"),
             description: "Total 20 years of experiences in Fintech and AI "
         },
         {
             name: "Airlangga",
             role: "Co-Founder",
-            image: require("../images/headshot-airlangga.jpg"),
+            image: require("../assets/headshot-airlangga.jpg"),
             description: "Experiences in 20 years of sales, marketing and business in Hardware businesses and Security Solutions"
         },
         {
