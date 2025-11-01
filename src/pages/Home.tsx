@@ -1,7 +1,8 @@
-import React,{useState,useEffect} from 'react';
+// import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {ArrowRight, Brain, Zap, Users, TrendingUp, Award, Cpu} from 'lucide-react';
 import CookieConsentComponent from "../components/CookieConsentComponent.tsx";
+import SEO from '../components/SEO.tsx';
 
 const Home = () => {
     const features = [
@@ -42,6 +43,11 @@ const Home = () => {
 
     return (
         <div>
+            <SEO 
+                title="Agantra Inovatif - AI Innovation and Solutions" 
+                description="Pioneering the convergence of AI technologies to build tomorrow's digital experiences today." 
+                name="Agantra Inovatif" 
+                type="website" />
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
                 <div className="absolute inset-0 bg-black opacity-50"></div>

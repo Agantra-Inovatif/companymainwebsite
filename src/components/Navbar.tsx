@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import {Menu, X, ChevronDown} from 'lucide-react';
 import ImageLogo from "../assets/Agantra-Inovatif-LogoOnly.png";

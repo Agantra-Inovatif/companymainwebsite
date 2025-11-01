@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {
     ArrowRight, Brain, Zap, Cpu, Bot, Scale, MessageCircle, Eye, Sparkles, FlaskConical, Combine
 } from "lucide-react";
+import SEO from '../components/SEO.tsx';
 
 const AILab = () => {
 
@@ -76,6 +77,11 @@ const AILab = () => {
 
     return (
         <div>
+            <SEO 
+                title="AI Innovation Lab - Agantra Inovatif" 
+                description="Explore the AI Innovation Lab at Agantra Inovatif, where we build AI-native platforms, autonomous agents, and cognitive infrastructure."
+                name="Agantra Inovatif" 
+                type="website" />
             <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div

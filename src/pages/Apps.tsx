@@ -1,8 +1,14 @@
 import React from 'react';
+import SEO from '../components/SEO.tsx';
 
 const Apps = () => {
     return (
         <div className="bg-white">
+            <SEO 
+                title="Our Apps - Agantra Inovatif" 
+                description="Discover our innovative applications designed to solve real-world problems."
+                name="Agantra Inovatif" 
+                type="website" />
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
                 <div className="absolute inset-0 bg-black opacity-50"></div>

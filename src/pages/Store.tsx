@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {ShoppingCart, CheckCircle} from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';

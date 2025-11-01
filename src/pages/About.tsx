@@ -1,5 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import {Users, Target, Lightbulb, Award} from 'lucide-react';
+import SEO from '../components/SEO.tsx';
 
 const About = () => {
 
@@ -55,6 +56,11 @@ const About = () => {
 
     return (
         <div>
+            <SEO 
+                title="About Agantra Inovatif - Our Story, Mission, and Team" 
+                description="Learn about Agantra Inovatif, our mission to solve real-world problems through AI, and the team behind our innovative solutions." 
+                name="Agantra Inovatif" 
+                type="website" />
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
