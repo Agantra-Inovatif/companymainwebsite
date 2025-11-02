@@ -3,6 +3,7 @@ import {ShoppingCart, CheckCircle} from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useTranslation } from 'react-i18next';
 
 
 import TShirtAgantraWesternBoy from "../store/assets/TShirt-Agantra-Logo-WesternMan.png";
@@ -17,9 +18,11 @@ import SweatshirtAgantraLogoWesternMan from '../store/assets/SweatShirt-Agantra-
 
 
 const Store = () => {
+    const { t } = useTranslation('store');
+
     const products = [
         {
-            name: "Our T-Shirt",
+            name: t('products.tshirt'),
             price: "$25.00",
             images: [
                 TShirtAgantraWesternBoy,
@@ -29,7 +32,7 @@ const Store = () => {
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Our Hoodie",
+            name: t('products.hoodie'),
             price: "$45.00",
             images: [
                 HoodieAgantraLogo,
@@ -39,7 +42,7 @@ const Store = () => {
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Proud in sweat shirt",
+            name: t('products.sweatshirt'),
             price: "$35.00",
             images: [
                 SweatshirtAgantraLogoAsianGirl,
@@ -48,37 +51,37 @@ const Store = () => {
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Long Sleeve",
+            name: t('products.longsleeve'),
             price: "$30.00",
             images: ["https://images.pexels.com/photos/2313192/pexels-photo-2313192.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Tank Top",
+            name: t('products.tanktop'),
             price: "$20.00",
             images: ["https://images.pexels.com/photos/1865131/pexels-photo-1865131.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Beanie",
+            name: t('products.beanie'),
             price: "$15.00",
             images: ["https://images.pexels.com/photos/569169/pexels-photo-569169.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: " Cap",
+            name: t('products.cap'),
             price: "$22.00",
             images: ["https://images.pexels.com/photos/1460036/pexels-photo-1460036.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Tote Bag",
+            name: t('products.totebag'),
             price: "$18.00",
             images: ["https://images.pexels.com/photos/1214212/pexels-photo-1214212.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_dR65nqb8w8ti2o8001"
         },
         {
-            name: "Backpack",
+            name: t('products.backpack'),
             price: "$55.00",
             images: ["https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"],
             stripeLink: "https://buy.stripe.com/test_dR65nqb8w8ti2o8001"
@@ -144,12 +147,11 @@ const Store = () => {
                 ></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        Our
                         <span
-                            className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Store</span>
+                            className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">{t('hero.title')}</span>
                     </h1>
                     <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-                        Find our latest products, services, and merchandise here.
+                        {t('hero.subtitle')}
                     </p>
                 </div>
             </section>
@@ -157,7 +159,7 @@ const Store = () => {
             {/* Subscriptions Section */}
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">AI Chat Subscriptions</h2>
+                    <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">{t('subscriptions.title')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {subscriptions.map((sub, index) => (
                             <div key={index} className="bg-white rounded-2xl shadow-lg p-8 flex flex-col">
@@ -177,7 +179,7 @@ const Store = () => {
                                     rel="noopener noreferrer"
                                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center text-lg font-semibold mt-auto"
                                 >
-                                    {sub.name === 'Enterprise AI Chat' ? 'Contact Us' : 'Subscribe'}
+                                    {sub.name === 'Enterprise AI Chat' ? t('subscriptions.contactUs') : t('subscriptions.subscribe')}
                                 </a>
                             </div>
                         ))}
@@ -188,7 +190,7 @@ const Store = () => {
             {/* Products Section */}
             <section className="py-20 bg-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Merchandise</h2>
+                    <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">{t('merchandise.title')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {products.map((product, index) => (
                             <div key={index}
@@ -216,7 +218,7 @@ const Store = () => {
                                         className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center text-lg font-semibold"
                                     >
                                         <ShoppingCart className="mr-2 h-5 w-5"/>
-                                        Buy Now
+                                        {t('merchandise.buyNow')}
                                     </a>
                                 </div>
                             </div>

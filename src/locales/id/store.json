@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Toko Kami",
+    "subtitle": "Temukan produk, layanan, dan merchandise terbaru kami di sini."
+  },
+  "subscriptions": {
+    "title": "Langganan AI Chat",
+    "contactUs": "Hubungi Kami",
+    "subscribe": "Berlangganan"
+  },
+  "merchandise": {
+    "title": "Merchandise",
+    "buyNow": "Beli Sekarang"
+  },
+  "products": {
+    "tshirt": "Kaos Kami",
+    "hoodie": "Hoodie Kami",
+    "sweatshirt": "Bangga dengan sweat shirt",
+    "longsleeve": "Lengan Panjang",
+    "tanktop": "Tank Top",
+    "beanie": "Beanie",
+    "cap": "Topi",
+    "totebag": "Tote Bag",
+    "backpack": "Ransel"
+  }
+}

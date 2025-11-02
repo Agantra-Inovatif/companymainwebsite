@@ -6,11 +6,13 @@ import common_en from './locales/en/common.json';
 import home_en from './locales/en/home.json';
 import about_en from './locales/en/about.json';
 import ailab_en from './locales/en/ailab.json';
+import store_en from './locales/en/store.json';
 
 import common_id from './locales/id/common.json';
 import home_id from './locales/id/home.json';
 import about_id from './locales/id/about.json';
 import ailab_id from './locales/id/ailab.json';
+import store_id from './locales/id/store.json';
 
 i18n
   .use(LanguageDetector)
@@ -29,15 +31,17 @@ i18n
         home: home_en,
         about: about_en,
         ailab: ailab_en,
+        store: store_en,
       },
       id: {
         common: common_id,
         home: home_id,
         about: about_id,
         ailab: ailab_id,
+        store: store_id,
       },
     },
-    ns: ['common', 'home', 'about', 'ailab'],
+    ns: ['common', 'home', 'about', 'ailab', 'store'],
     defaultNS: 'common',
   });
 

@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Our Store",
+    "subtitle": "Find our latest products, services, and merchandise here."
+  },
+  "subscriptions": {
+    "title": "AI Chat Subscriptions",
+    "contactUs": "Contact Us",
+    "subscribe": "Subscribe"
+  },
+  "merchandise": {
+    "title": "Merchandise",
+    "buyNow": "Buy Now"
+  },
+  "products": {
+    "tshirt": "Our T-Shirt",
+    "hoodie": "Our Hoodie",
+    "sweatshirt": "Proud in sweat shirt",
+    "longsleeve": "Long Sleeve",
+    "tanktop": "Tank Top",
+    "beanie": "Beanie",
+    "cap": "Cap",
+    "totebag": "Tote Bag",
+    "backpack": "Backpack"
+  }
+}
