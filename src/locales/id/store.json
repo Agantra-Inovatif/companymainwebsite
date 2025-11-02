@@ -1,26 +1,33 @@
 {
-  "hero": {
-    "title": "Toko Kami",
-    "subtitle": "Temukan produk, layanan, dan merchandise terbaru kami di sini."
-  },
-  "subscriptions": {
-    "title": "Langganan AI Chat",
-    "contactUs": "Hubungi Kami",
-    "subscribe": "Berlangganan"
-  },
-  "merchandise": {
-    "title": "Merchandise",
-    "buyNow": "Beli Sekarang"
-  },
-  "products": {
-    "tshirt": "Kaos Kami",
-    "hoodie": "Hoodie Kami",
-    "sweatshirt": "Bangga dengan sweat shirt",
-    "longsleeve": "Lengan Panjang",
-    "tanktop": "Tank Top",
-    "beanie": "Beanie",
-    "cap": "Topi",
-    "totebag": "Tote Bag",
-    "backpack": "Ransel"
-  }
+  "store_seo_title": "Toko - Agantra Inovatif",
+  "store_seo_description": "Temukan produk, layanan, dan merchandise terbaru kami di sini.",
+  "hero.title": "Toko Kami",
+  "hero.subtitle": "Temukan produk, layanan, dan merchandise terbaru kami di sini.",
+  "subscriptions.title": "Langganan Obrolan AI",
+  "subscriptions.basic.name": "Obrolan AI Dasar",
+  "subscriptions.basic.feature1": "1.000 pesan/bulan",
+  "subscriptions.basic.feature2": "Model AI standar",
+  "subscriptions.basic.feature3": "Dukungan komunitas",
+  "subscriptions.pro.name": "Obrolan AI Pro",
+  "subscriptions.pro.feature1": "5.000 pesan/bulan",
+  "subscriptions.pro.feature2": "Model AI tingkat lanjut",
+  "subscriptions.pro.feature3": "Dukungan prioritas",
+  "subscriptions.enterprise.name": "Obrolan AI Perusahaan",
+  "subscriptions.enterprise.price": "Hubungi Kami",
+  "subscriptions.enterprise.feature1": "Pesan tak terbatas",
+  "subscriptions.enterprise.feature2": "Model AI khusus",
+  "subscriptions.enterprise.feature3": "Dukungan khusus",
+  "subscriptions.contactUs": "Hubungi Kami",
+  "subscriptions.subscribe": "Berlangganan",
+  "merchandise.title": "Merchandise",
+  "merchandise.buyNow": "Beli Sekarang",
+  "products.tshirt": "Kaos Agantra Inovatif",
+  "products.hoodie": "Hoodie Agantra Inovatif",
+  "products.sweatshirt": "Sweatshirt Agantra Inovatif",
+  "products.longsleeve": "Lengan Panjang Agantra Inovatif",
+  "products.tanktop": "Tank Top Agantra Inovatif",
+  "products.beanie": "Beanie Agantra Inovatif",
+  "products.cap": "Topi Agantra Inovatif",
+  "products.totebag": "Tas Jinjing Agantra Inovatif",
+  "products.backpack": "Ransel Agantra Inovatif"
 }

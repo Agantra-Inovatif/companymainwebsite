@@ -6,12 +6,18 @@ import common_en from './locales/en/common.json';
 import home_en from './locales/en/home.json';
 import about_en from './locales/en/about.json';
 import ailab_en from './locales/en/ailab.json';
+import apps_en from './locales/en/apps.json';
+import contact_en from './locales/en/contact.json';
+import portfolio_en from './locales/en/portfolio.json';
 import store_en from './locales/en/store.json';
 
 import common_id from './locales/id/common.json';
 import home_id from './locales/id/home.json';
 import about_id from './locales/id/about.json';
 import ailab_id from './locales/id/ailab.json';
+import apps_id from './locales/id/apps.json';
+import contact_id from './locales/id/contact.json';
+import portfolio_id from './locales/id/portfolio.json';
 import store_id from './locales/id/store.json';
 
 i18n
@@ -31,6 +37,9 @@ i18n
         home: home_en,
         about: about_en,
         ailab: ailab_en,
+        apps: apps_en,
+        contact: contact_en,
+        portfolio: portfolio_en,
         store: store_en,
       },
       id: {
@@ -38,10 +47,13 @@ i18n
         home: home_id,
         about: about_id,
         ailab: ailab_id,
+        apps: apps_id,
+        contact: contact_id,
+        portfolio: portfolio_id,
         store: store_id,
       },
     },
-    ns: ['common', 'home', 'about', 'ailab', 'store'],
+    ns: ['common', 'home', 'about', 'ailab', 'apps', 'contact', 'portfolio', 'store'],
     defaultNS: 'common',
   });
 

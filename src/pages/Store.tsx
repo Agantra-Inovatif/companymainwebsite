@@ -1,10 +1,10 @@
-// import React from 'react';
-import {ShoppingCart, CheckCircle} from 'lucide-react';
+import React from 'react';
+import { ShoppingCart, CheckCircle } from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useTranslation } from 'react-i18next';
-
+import SEO from '../components/SEO.tsx';
 
 import TShirtAgantraWesternBoy from "../store/assets/TShirt-Agantra-Logo-WesternMan.png";
 import TShirtAgantraAsianGirl from "../store/assets/TShirt-Agantra-Logo-AsianGirl.png";
@@ -90,32 +90,32 @@ const Store = () => {
 
     const subscriptions = [
         {
-            name: "Basic AI Chat",
+            name: t('subscriptions.basic.name'),
             price: "$10/month",
             features: [
-                "1,000 messages/month",
-                "Standard AI model",
-                "Community support"
+                t('subscriptions.basic.feature1'),
+                t('subscriptions.basic.feature2'),
+                t('subscriptions.basic.feature3')
             ],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Pro AI Chat",
+            name: t('subscriptions.pro.name'),
             price: "$25/month",
             features: [
-                "5,000 messages/month",
-                "Advanced AI model",
-                "Priority support"
+                t('subscriptions.pro.feature1'),
+                t('subscriptions.pro.feature2'),
+                t('subscriptions.pro.feature3')
             ],
             stripeLink: "https://buy.stripe.com/test_5kAcP6b8w5d2gPS144"
         },
         {
-            name: "Enterprise AI Chat",
-            price: "Contact Us",
+            name: t('subscriptions.enterprise.name'),
+            price: t('subscriptions.enterprise.price'),
             features: [
-                "Unlimited messages",
-                "Custom AI model",
-                "Dedicated support"
+                t('subscriptions.enterprise.feature1'),
+                t('subscriptions.enterprise.feature2'),
+                t('subscriptions.enterprise.feature3')
             ],
             stripeLink: "/contact"
         }
@@ -135,6 +135,11 @@ const Store = () => {
 
     return (
         <div className="bg-gray-50">
+            <SEO 
+                title={t('store_seo_title')} 
+                description={t('store_seo_description')} 
+                name="Agantra Inovatif" 
+                type="website" />
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
                 <div className="absolute inset-0 bg-black opacity-50"></div>

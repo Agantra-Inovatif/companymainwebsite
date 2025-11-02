@@ -1,26 +1,33 @@
 {
-  "hero": {
-    "title": "Our Store",
-    "subtitle": "Find our latest products, services, and merchandise here."
-  },
-  "subscriptions": {
-    "title": "AI Chat Subscriptions",
-    "contactUs": "Contact Us",
-    "subscribe": "Subscribe"
-  },
-  "merchandise": {
-    "title": "Merchandise",
-    "buyNow": "Buy Now"
-  },
-  "products": {
-    "tshirt": "Our T-Shirt",
-    "hoodie": "Our Hoodie",
-    "sweatshirt": "Proud in sweat shirt",
-    "longsleeve": "Long Sleeve",
-    "tanktop": "Tank Top",
-    "beanie": "Beanie",
-    "cap": "Cap",
-    "totebag": "Tote Bag",
-    "backpack": "Backpack"
-  }
+  "store_seo_title": "Store - Agantra Inovatif",
+  "store_seo_description": "Find our latest products, services, and merchandise here.",
+  "hero.title": "Our Store",
+  "hero.subtitle": "Find our latest products, services, and merchandise here.",
+  "subscriptions.title": "AI Chat Subscriptions",
+  "subscriptions.basic.name": "Basic AI Chat",
+  "subscriptions.basic.feature1": "1,000 messages/month",
+  "subscriptions.basic.feature2": "Standard AI model",
+  "subscriptions.basic.feature3": "Community support",
+  "subscriptions.pro.name": "Pro AI Chat",
+  "subscriptions.pro.feature1": "5,000 messages/month",
+  "subscriptions.pro.feature2": "Advanced AI model",
+  "subscriptions.pro.feature3": "Priority support",
+  "subscriptions.enterprise.name": "Enterprise AI Chat",
+  "subscriptions.enterprise.price": "Contact Us",
+  "subscriptions.enterprise.feature1": "Unlimited messages",
+  "subscriptions.enterprise.feature2": "Custom AI model",
+  "subscriptions.enterprise.feature3": "Dedicated support",
+  "subscriptions.contactUs": "Contact Us",
+  "subscriptions.subscribe": "Subscribe",
+  "merchandise.title": "Merchandise",
+  "merchandise.buyNow": "Buy Now",
+  "products.tshirt": "Agantra Inovatif T-Shirt",
+  "products.hoodie": "Agantra Inovatif Hoodie",
+  "products.sweatshirt": "Agantra Inovatif Sweatshirt",
+  "products.longsleeve": "Agantra Inovatif Long Sleeve",
+  "products.tanktop": "Agantra Inovatif Tank Top",
+  "products.beanie": "Agantra Inovatif Beanie",
+  "products.cap": "Agantra Inovatif Cap",
+  "products.totebag": "Agantra Inovatif Tote Bag",
+  "products.backpack": "Agantra Inovatif Backpack"
 }

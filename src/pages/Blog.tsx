@@ -1,57 +1,66 @@
 import React from 'react';
 import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
+import SEO from '../components/SEO.tsx';
+import { useTranslation } from 'react-i18next';
 
 const Blog = () => {
+  const { t } = useTranslation('blog');
+
   const featured = {
-    title: "The Future of AI in Business Intelligence",
-    excerpt: "Exploring how artificial intelligence is revolutionizing Business Intelligence, from automated data analysis to predictive insights and automated reporting.",
+    title: t('featured_title'),
+    excerpt: t('featured_excerpt'),
     image: "https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
     author: "Alex Chen",
     date: "January 15, 2025",
-    readTime: "8 min read",
-    category: "AI & Business"
+    readTime: t('featured_read_time'),
+    category: t('featured_category')
   };
 
   const posts = [
     {
-      title: "Machine Learning Operations in Production",
-      excerpt: "A comprehensive guide to deploying and maintaining ML models in production environments with continuous monitoring.",
+      title: t('post1_title'),
+      excerpt: t('post1_excerpt'),
       image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       author: "Michael Rodriguez",
       date: "January 10, 2025",
-      readTime: "10 min read",
+      readTime: t('post1_read_time'),
       category: "AI/ML"
     },
     {
-      title: "AI-Powered Threat Detection",
-      excerpt: "Essential security practices for using AI to detect and respond to cybersecurity threats in real-time.",
+      title: t('post2_title'),
+      excerpt: t('post2_excerpt'),
       image: "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       author: "Emily Davis",
       date: "January 8, 2025",
-      readTime: "7 min read",
+      readTime: t('post2_read_time'),
       category: "Security"
     },
     {
-      title: "The Rise of Generative AI",
-      excerpt: "How generative AI is enabling new forms of content creation and democratizing creativity.",
+      title: t('post3_title'),
+      excerpt: t('post3_excerpt'),
       image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
       author: "Alex Chen",
       date: "January 5, 2025",
-      readTime: "9 min read",
+      readTime: t('post3_read_time'),
       category: "AI"
     },
   ];
 
-  const categories = ["All", "AI/ML", "Security", "AI"];
+  const categories = [t('all_category'), "AI/ML", t('security_category'), "AI"];
 
   return (
     <div>
+      <SEO 
+        title={t('blog_seo_title')} 
+        description={t('blog_seo_description')} 
+        name="Agantra Inovatif" 
+        type="website" />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-purple-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Blog & Insights</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">{t('blog_title')}</h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Stay ahead of the curve with our latest insights on AI and emerging technologies.
+            {t('blog_subtitle')}
           </p>
         </div>
       </section>
@@ -69,7 +78,7 @@ const Blog = () => {
                 />
                 <div className="absolute top-6 left-6">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    Featured
+                    {t('featured_badge')}
                   </span>
                 </div>
               </div>
@@ -96,7 +105,7 @@ const Blog = () => {
                 </div>
 
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-300 flex items-center w-fit">
-                  Read Article
+                  {t('read_article_button')}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </button>
               </div>
@@ -164,7 +173,7 @@ const Blog = () => {
                   </div>
 
                   <button className="text-blue-600 font-semibold hover:text-purple-600 transition-colors duration-300 flex items-center text-sm">
-                    Read More
+                    {t('read_more_button')}
                     <ArrowRight className="ml-1 h-4 w-4" />
                   </button>
                 </div>
@@ -177,18 +186,18 @@ const Blog = () => {
       {/* Newsletter Signup */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
+          <h2 className="text-4xl font-bold mb-6">{t('newsletter_title')}</h2>
           <p className="text-xl mb-8 opacity-90">
-            Subscribe to our newsletter for the latest insights on AI and emerging technologies.
+            {t('newsletter_subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row max-w-lg mx-auto gap-4">
             <input
               type="email"
-              placeholder="Enter your email"
+              placeholder={t('newsletter_placeholder')}
               className="flex-1 px-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-300"
             />
             <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              Subscribe
+              {t('subscribe_button')}
             </button>
           </div>
         </div>

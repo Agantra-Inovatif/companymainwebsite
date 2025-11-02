@@ -1,12 +1,15 @@
 import React from 'react';
 import SEO from '../components/SEO.tsx';
+import { useTranslation, Trans } from 'react-i18next';
 
 const Apps = () => {
+    const { t } = useTranslation('apps');
+
     return (
         <div className="bg-white">
             <SEO 
-                title="Our Apps - Agantra Inovatif" 
-                description="Discover our innovative applications designed to solve real-world problems."
+                title={t('apps_seo_title')} 
+                description={t('apps_seo_description')}
                 name="Agantra Inovatif" 
                 type="website" />
             {/* Hero Section */}
@@ -21,12 +24,12 @@ const Apps = () => {
                 ></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        Our
-                        <span
-                            className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Apps</span>
+                        <Trans i18nKey="apps_title" ns="apps">
+                            Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Apps</span>
+                        </Trans>
                     </h1>
                     <p className="text-xl md:text-2xl  bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent  max-w-3xl mx-auto">
-                        Discover our innovative applications designed to solve real-world problems.
+                        {t('apps_subtitle')}
                     </p>
                 </div>
             </section>
@@ -35,9 +38,9 @@ const Apps = () => {
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Coming Soon</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('coming_soon_title')}</h2>
                         <p className="text-lg text-gray-600">
-                            We are currently developing exciting new applications. Please check back later to see our latest innovations!
+                            {t('coming_soon_subtitle')}
                         </p>
                     </div>
                 </div>

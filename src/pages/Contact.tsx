@@ -1,94 +1,77 @@
-import React, {useState} from 'react';
-import {Mail, Phone, MapPin, Clock, Send, CheckCircle} from 'lucide-react';
+import React from 'react';
+import {Mail, Phone, MapPin, Clock, CheckCircle} from 'lucide-react';
 import '../googleformembed.css';
+import SEO from '../components/SEO.tsx';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        company: '',
-        service: '',
-        budget: '',
-        message: ''
-    });
-
-    const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-            .join('&');
-    };
-
-    // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    //     setFormData({
-    //         ...formData,
-    //         [e.target.name]: e.target.value
-    //     });
-    // };
-    //
-    // const handleSubmit = (e: React.FormEvent) => {
-    //
-    //     // Handle form submission here
-    //     fetch('/', {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //         body: encode({ 'form-name': 'contact', ...formData }),
-    //     })
-    //         .then(() => alert('Success!'))
-    //         .catch((error) => alert(error));
-    //
-    //
-    //     e.preventDefault();
-    //     // console.log('Form submitted:', formData);
-    // };
+    const { t } = useTranslation('contact');
 
     const contactInfo = [
         {
             icon: <Mail className="h-6 w-6"/>,
-            title: "Email Us",
-            details: "info <at> nextmantra.com",
-            description: "Send us an email anytime"
+            title: t('email_us_title'),
+            details: "info@nextmantra.com",
+            description: t('email_us_description')
         },
         {
             icon: <Phone className="h-6 w-6" />,
-            title: "Call Us",
+            title: t('call_us_title'),
             details: "+37253194019",
-            description: "Voice available"
+            description: t('call_us_description')
         },
         {
             icon: <MapPin className="h-6 w-6"/>,
-            title: "Linkedin",
+            title: t('linkedin_title'),
             details: "https://www.linkedin.com/company/agantra-inovatif",
-            description: "Our Linkedin Page"
+            description: t('linkedin_description')
         },
         {
             icon: <Clock className="h-6 w-6"/>,
-            title: "Working Hours",
-            details: "Monday - Friday: 9am - 6pm",
-            description: "Weekend emergency support available"
+            title: t('working_hours_title'),
+            details: t('working_hours_details'),
+            description: t('working_hours_description')
         }
     ];
 
-    // const services = [
-    //     "AI Labs and Solutions",
-    //     "Custom Development"
-    // ];
-    //
-    // const budgets = [
-    //     "Under $10,000",
-    //     "$10,000 - $25,000",
-    //     "$25,000 - $50,000",
-    //     "$50,000 - $100,000",
-    //     "$100,000+"
-    // ];
+    const benefits = [
+        t('benefit1'),
+        t('benefit2'),
+        t('benefit3'),
+    ];
+
+    const faqs = [
+        {
+            question: t('faq1_question'),
+            answer: t('faq1_answer')
+        },
+        {
+            question: t('faq2_question'),
+            answer: t('faq2_answer')
+        },
+        {
+            question: t('faq3_question'),
+            answer: t('faq3_answer')
+        },
+        {
+            question: t('faq4_question'),
+            answer: t('faq4_answer')
+        }
+    ];
 
     return (
         <div>
+            <SEO 
+                title={t('contact_seo_title')} 
+                description={t('contact_seo_description')} 
+                name="Agantra Inovatif" 
+                type="website" />
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">Get In Touch</h1>
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4">{t('contact_title')}</h1>
                     <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                        Ready to transform your business? Let's discuss your project and explore the possibilities.
+                        {t('contact_subtitle')}
                     </p>
                 </div>
             </section>
@@ -100,7 +83,7 @@ const Contact = () => {
 
                         {/* Contact Form */}
                         <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
-                            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Start Your Project</h2>
+                            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{t('start_project_title')}</h2>
 
                             <div className={'google-iframe-container'}>
                                 <iframe
@@ -118,10 +101,9 @@ const Contact = () => {
                         {/* Contact Information */}
                         <div className="space-y-8">
                             <div>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Contact Information</h2>
+                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t('contact_info_title')}</h2>
                                 <p className="text-gray-600 text-base md:text-lg mb-6">
-                                    We'd love to hear from you. Choose the most convenient way to get in touch,
-                                    and we'll respond as quickly as possible.
+                                    {t('contact_info_subtitle')}
                                 </p>
                             </div>
 
@@ -146,13 +128,9 @@ const Contact = () => {
 
                             {/* Why Choose Us */}
                             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 md:p-8 rounded-2xl">
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">Why Partner with us?</h3>
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">{t('why_partner_title')}</h3>
                                 <div className="space-y-4">
-                                    {[
-                                        "Transparent Cost of Development",
-                                        "Dedicated project manager for seamless communication",
-                                        "Agile development with regular updates and demos",
-                                    ].map((benefit, index) => (
+                                    {benefits.map((benefit, index) => (
                                         <div key={index} className="flex items-center">
                                             <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"/>
                                             <span className="text-gray-700 text-sm md:text-base">{benefit}</span>
@@ -169,31 +147,14 @@ const Contact = () => {
             <section className="py-16 sm:py-20 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('faq_title')}</h2>
                         <p className="text-lg md:text-xl text-gray-600">
-                            Quick answers to common questions about our services and process.
+                            {t('faq_subtitle')}
                         </p>
                     </div>
 
                     <div className="space-y-6">
-                        {[
-                            {
-                                question: "How long does a typical project take?",
-                                answer: "Project timelines vary based on complexity, but most projects take 2-6 months from concept to deployment. We provide detailed timelines during the consultation phase."
-                            },
-                            {
-                                question: "Do you work with startups or only established companies?",
-                                answer: "We work with organizations of all sizes, from innovative startups to Fortune 500 companies. Our flexible approach adapts to your specific needs and budget."
-                            },
-                            {
-                                question: "What technologies do you specialize in?",
-                                answer: "We specialize in AI/ML frameworks (TensorFlow, PyTorch) and modern web technologies (React, Node.js, Python, Dotnet Core,)."
-                            },
-                            {
-                                question: "Do you provide ongoing support after project completion?",
-                                answer: "Yes, we offer comprehensive post-launch support including maintenance, updates, monitoring, and feature enhancements to ensure your solution continues to perform optimally."
-                            }
-                        ].map((faq, index) => (
+                        {faqs.map((faq, index) => (
                             <div key={index} className="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
                                 <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{faq.question}</h3>
                                 <p className="text-gray-600 leading-relaxed text-sm md:text-base">{faq.answer}</p>
