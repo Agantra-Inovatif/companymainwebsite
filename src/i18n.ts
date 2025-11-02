@@ -1,10 +1,18 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
+
+import common_en from './locales/en/common.json';
+import home_en from './locales/en/home.json';
+import about_en from './locales/en/about.json';
+import ailab_en from './locales/en/ailab.json';
+
+import common_id from './locales/id/common.json';
+import home_id from './locales/id/home.json';
+import about_id from './locales/id/about.json';
+import ailab_id from './locales/id/ailab.json';
 
 i18n
-  .use(HttpApi)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
@@ -14,14 +22,22 @@ i18n
       order: ['cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
       caches: ['cookie'],
     },
-    backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+    resources: {
+      en: {
+        common: common_en,
+        home: home_en,
+        about: about_en,
+        ailab: ailab_en,
+      },
+      id: {
+        common: common_id,
+        home: home_id,
+        about: about_id,
+        ailab: ailab_id,
+      },
     },
-    ns: ['common', 'home', 'about', 'ailab', 'apps', 'blog', 'contact', 'portfolio', 'store'],
+    ns: ['common', 'home', 'about', 'ailab'],
     defaultNS: 'common',
-    react: {
-      useSuspense: false,
-    },
   });
 
 export default i18n;
