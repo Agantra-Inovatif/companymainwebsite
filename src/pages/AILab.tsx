@@ -95,7 +95,7 @@ const AILab = () => {
                 ></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        <Trans i18nKey="ailab_title">
+                        <Trans i18nKey="ailab_title" ns="ailab">
                             Code Intelligence. Shape Reality
                             <div
                                 className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Rethink
