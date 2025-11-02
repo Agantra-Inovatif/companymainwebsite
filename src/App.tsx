@@ -5,8 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Apps from './pages/Apps';
-// import Services from './pages/Services';
-// import Projects from './pages/Projects';
+import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import AILabs from './pages/AILab';
@@ -26,8 +25,7 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/apps" element={<Apps/>}/>
                     <Route path="/about" element={<About/>}/>
-                    {/*<Route path="/services" element={<Services />} />*/}
-                    {/*<Route path="/projects" element={<Projects />} />*/}
+                    <Route path="/portfolio" element={<Portfolio />} />
                     <Route path="/blog" element={<Blog/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/ailabs" element={<AILabs/>}/>
