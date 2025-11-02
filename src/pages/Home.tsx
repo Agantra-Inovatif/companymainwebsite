@@ -1,43 +1,45 @@
-// import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {ArrowRight, Brain, Zap, Users, TrendingUp, Award, Cpu} from 'lucide-react';
 import CookieConsentComponent from "../components/CookieConsentComponent.tsx";
 import SEO from '../components/SEO.tsx';
+import { useTranslation, Trans } from 'react-i18next';
 
 const Home = () => {
+    const { t } = useTranslation('home');
+
     const features = [
         {
             icon: <Brain className="h-8 w-8"/>,
-            title: "AI Innovation",
-            description: "Cutting-edge artificial intelligence solutions that transform businesses and enhance human capabilities."
+            title: t('ai_innovation_title'),
+            description: t('ai_innovation_description')
         },
         {
             icon: <Cpu className="h-8 w-8"/>,
-            title: "Custom AI Models",
-            description: "We build and train custom AI models tailored to your specific business needs and data."
+            title: t('custom_ai_models_title'),
+            description: t('custom_ai_models_description')
         },
         {
             icon: <Zap className="h-8 w-8"/>,
-            title: "Rapid Development and Integration",
-            description: "Integrate legacy technology with AI to control cost and bring innovation to your organization."
+            title: t('rapid_development_title'),
+            description: t('rapid_development_description')
         }
     ];
 
     const whyChooseUs = [
         {
             icon: <Users className="h-8 w-8" />,
-            title: "Expert Team",
-            description: "Our team consists of leading experts in AI, dedicated to delivering excellence."
+            title: t('expert_team_title'),
+            description: t('expert_team_description')
         },
         {
             icon: <TrendingUp className="h-8 w-8" />,
-            title: "Innovative Solutions",
-            description: "We provide creative and effective AI solutions that are tailored to your specific business needs."
+            title: t('innovative_solutions_title'),
+            description: t('innovative_solutions_description')
         },
         {
             icon: <Award className="h-8 w-8" />,
-            title: "Proven Results",
-            description: "Our track record of successful AI projects and satisfied clients speaks for itself."
+            title: t('proven_results_title'),
+            description: t('proven_results_description')
         }
     ];
 
@@ -59,12 +61,12 @@ const Home = () => {
                 ></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        Wisdom Meets
-                        <span
-                            className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Innovation</span>
+                        <Trans i18nKey="home_title">
+                            Wisdom Meets <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Innovation</span>
+                        </Trans>
                     </h1>
                     <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-                        Harnessing deep artificial intelligence to design, shape, and deliver the most advanced digital experiences of tomorrow.
+                        {t('home_subtitle')}
                     </p>
                 </div>
             </section>
@@ -74,10 +76,10 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            What is Agantra Inovatif ?
+                            {t('what_is_agantra_title')}
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Very simple: We provide AI technology to make your life better, sleep well and spend more time with family.
+                            {t('what_is_agantra_subtitle')}
                         </p>
                     </div>
 
@@ -102,10 +104,10 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            Why Choose Us?
+                            {t('why_choose_us_title')}
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            We are your trusted partner in navigating the complexities of Artificial Intelligence.
+                            {t('why_choose_us_subtitle')}
                         </p>
                     </div>
 
@@ -129,17 +131,16 @@ const Home = () => {
             <section className="py-20 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                        AI Innovation Labs
+                        {t('ai_labs_title')}
                     </h2>
                     <p className="text-xl text-gray-600 mb-8">
-                        We develop our in-house or use AI Models and transforms into business usage. It will help
-                        business to create a new opportunity or cutting cost
+                        {t('ai_labs_subtitle')}
                     </p>
                     <Link
                         to="/ailabs"
                         className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center"
                     >
-                        Visit our AI Labs
+                        {t('visit_ai_labs_button')}
                         <ArrowRight className="ml-2 h-5 w-5"/>
                     </Link>
                 </div>
@@ -149,15 +150,14 @@ const Home = () => {
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-4">Apps</h2>
-                        <p className="text-xl opacity-90">We will create several apps innovation to start our journey.
-                            Several Apps that meet the challenges</p>                    </div>
+                        <h2 className="text-4xl font-bold mb-4">{t('apps_title')}</h2>
+                        <p className="text-xl opacity-90">{t('apps_subtitle')}</p>                    </div>
                     <div className="text-center">
                         <Link
                             to="/apps"
                             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center"
                         >
-                            Our Apps
+                            {t('our_apps_button')}
                             <ArrowRight className="ml-2 h-5 w-5"/>
                         </Link>
                     </div>
@@ -169,17 +169,16 @@ const Home = () => {
             <section className="py-20 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                        Ready to Transform Your Business?
+                        {t('cta_title')}
                     </h2>
                     <p className="text-xl text-gray-600 mb-8">
-                        Let's discuss how AI can revolutionize your operations and create new
-                        opportunities for growth.
+                        {t('cta_subtitle')}
                     </p>
                     <Link
                         to="/contact"
                         className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center"
                     >
-                        Start Your Journey
+                        {t('start_your_journey_button')}
                         <ArrowRight className="ml-2 h-5 w-5"/>
                     </Link>
                 </div>

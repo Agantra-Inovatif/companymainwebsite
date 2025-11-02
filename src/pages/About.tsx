@@ -1,73 +1,74 @@
-// import React from 'react';
 import {Users, Target, Lightbulb, Award} from 'lucide-react';
 import SEO from '../components/SEO.tsx';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+    const { t } = useTranslation('about');
 
     const team = [
         {
             name: "Nicko",
-            role: "Founder",
+            role: t('founder'),
             image: require("../assets/headshot-nicko.jpg"),
-            description: "Total 20 years of experiences in Fintech and AI "
+            description: t('nicko_description')
         },
         {
             name: "Airlangga",
-            role: "Co-Founder",
+            role: t('co_founder'),
             image: require("../assets/headshot-airlangga.jpg"),
-            description: "Experiences in 20 years of sales, marketing and business in Hardware businesses and Security Solutions"
+            description: t('airlangga_description')
         },
         {
             name: "You?",
-            role: "Future Products",
+            role: t('future_products'),
             image: "https://images.pexels.com/photos/3683107/pexels-photo-3683107.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-            description: "Product Development "
+            description: t('product_development')
         },
         {
             name: "You?",
-            role: "Future Operations",
+            role: t('future_operations'),
             image: "https://images.pexels.com/photos/3683107/pexels-photo-3683107.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-            description: "Internal Operations"
+            description: t('internal_operations')
         }
     ];
 
     const values = [
         {
             icon: <Target className="h-8 w-8"/>,
-            title: "Mission-Driven",
-            description: "We're committed to solving real-world problems through innovative technology solutions."
+            title: t('mission_driven'),
+            description: t('mission_driven_description')
         },
         {
             icon: <Lightbulb className="h-8 w-8"/>,
-            title: "Innovation First",
-            description: "Constantly pushing boundaries and exploring new possibilities in AI."
+            title: t('innovation_first'),
+            description: t('innovation_first_description')
         },
         {
             icon: <Users className="h-8 w-8"/>,
-            title: "Collaborative",
-            description: "Working closely with clients and partners to achieve shared success."
+            title: t('collaborative'),
+            description: t('collaborative_description')
         },
         {
             icon: <Award className="h-8 w-8"/>,
-            title: "Excellence",
-            description: "Maintaining the highest standards in everything we do, from code to customer service."
+            title: t('excellence'),
+            description: t('excellence_description')
         }
     ];
 
     return (
         <div>
             <SEO 
-                title="About Agantra Inovatif - Our Story, Mission, and Team" 
-                description="Learn about Agantra Inovatif, our mission to solve real-world problems through AI, and the team behind our innovative solutions." 
+                title={t('about_seo_title')} 
+                description={t('about_seo_description')} 
                 name="Agantra Inovatif" 
                 type="website" />
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">About Agantra Inovatif</h1>
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6">{t('about_title')}</h1>
                         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-                            Our Key Team Member of the AI Innovation
+                            {t('about_subtitle')}
                         </p>
                     </div>
                 </div>
@@ -78,24 +79,16 @@ const About = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+                            <h2 className="text-4xl font-bold text-gray-900 mb-6">{t('our_story_title')}</h2>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
-                                Founded in 2025, Agantra Inovatif emerged from a simple belief: that artificial intelligence would fundamentally transform how businesses operate and
-                                interact with their customers.
+                                {t('our_story_p1')}
                             </p>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
-                                The name "Agantra" is a fusion of "Agami," meaning future, and "Mantra," a sacred utterance. It represents our evolution from our previous brand, NextMantra, signifying our commitment to chanting the future of innovation.
+                                {t('our_story_p2')}
                             </p>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
-                                What started as a small team of passionate developers has grown into an innovation lab,
-                                helping business across industries harness the power of emerging technologies to solve
-                                complex challenges
-                                and unlock new opportunities.
+                                {t('our_story_p3')}
                             </p>
-                            {/*<p className="text-lg text-gray-600 leading-relaxed">*/}
-                            {/*  Today, we're proud to have delivered over 100 projects, partnered with industry leaders, */}
-                            {/*  and maintained our commitment to pushing the boundaries of what's possible.*/}
-                            {/*</p>*/}
                         </div>
                         <div className="relative">
                             <img
@@ -112,9 +105,9 @@ const About = () => {
             <section className="py-20 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('our_values_title')}</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            These core principles guide everything we do and shape how we approach every project.
+                            {t('our_values_subtitle')}
                         </p>
                     </div>
 
@@ -137,9 +130,9 @@ const About = () => {
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('meet_our_team_title')}</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Talented individuals united by a shared passion for innovation and excellence.
+                            {t('meet_our_team_subtitle')}
                         </p>
                     </div>
 

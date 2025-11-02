@@ -1,9 +1,11 @@
 import {useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
-import {Menu, X, ChevronDown} from 'lucide-react';
+import {Menu, X, ChevronDown, Globe} from 'lucide-react';
 import ImageLogo from "../assets/Agantra-Inovatif-LogoOnly.png";
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+    const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
     const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -28,6 +30,10 @@ const Navbar = () => {
         }
     ];
 
+    const changeLanguage = (lng: string) => {
+        i18n.changeLanguage(lng);
+    };
+
     const closeAllMenus = () => {
         setIsOpen(false);
         setOpenMenu(null);
@@ -39,16 +45,11 @@ const Navbar = () => {
                 <div className="flex justify-between h-28">
                     <div className="flex items-center">
                         <Link to="/" className="flex items-center space-x-2">
-                            {/*<div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">*/}
-                            {/*    <Zap className="h-6 w-6 text-white"/>*/}
-                            {/*   */}
-                            {/*</div>*/}
                             <div>
                                 <img src={ImageLogo} alt="logo" style={{width: '50px'}}/>
                             </div>
                             <div>
                                 <h1 className="text-xl font-bold text-gray-900">Agantra Inovatif</h1>
-                                {/*<p className={'font-bold text-sm text-gray-400'}>Inovatif</p>*/}
                             </div>
                         </Link>
                     </div>
@@ -104,6 +105,20 @@ const Navbar = () => {
                         >
                             Get Started
                         </Link>
+                        <div className="relative" onMouseEnter={() => setOpenMenu('language')} onMouseLeave={() => setOpenMenu(null)}>
+                            <button className="flex items-center text-gray-700 hover:text-blue-600">
+                                <Globe className="h-5 w-5" />
+                                <ChevronDown className={`h-4 w-4 ml-1 transition-transform duration-200 ${openMenu === 'language' ? 'rotate-180' : ''}`}/>
+                            </button>
+                            {openMenu === 'language' && (
+                                <div className="absolute right-0 top-full pt-2 w-32">
+                                    <div className="bg-white rounded-md shadow-lg z-10">
+                                        <button onClick={() => changeLanguage('en')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</button>
+                                        <button onClick={() => changeLanguage('id')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Indonesia</button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                     {/* Mobile menu button */}
@@ -163,6 +178,10 @@ const Navbar = () => {
                             >
                                 Get Started
                             </Link>
+                            <div className="px-3 py-2">
+                                <button onClick={() => changeLanguage('en')} className="block w-full text-left py-2 text-base font-medium text-gray-700 hover:bg-gray-50">English</button>
+                                <button onClick={() => changeLanguage('id')} className="block w-full text-left py-2 text-base font-medium text-gray-700 hover:bg-gray-50">Indonesia</button>
+                            </div>
                         </div>
                     </div>
                 )}
