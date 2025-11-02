@@ -15,7 +15,7 @@ i18n
       caches: ['cookie'],
     },
     backend: {
-      loadPath: '/src/locales/{{lng}}/{{ns}}.json',
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
     ns: ['common', 'home', 'about', 'ailab', 'apps', 'blog', 'contact', 'portfolio', 'store'],
     defaultNS: 'common',
