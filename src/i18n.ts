@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+// Import English translations
 import common_en from './locales/en/common.json';
 import home_en from './locales/en/home.json';
 import about_en from './locales/en/about.json';
@@ -11,6 +12,7 @@ import contact_en from './locales/en/contact.json';
 import portfolio_en from './locales/en/portfolio.json';
 import store_en from './locales/en/store.json';
 
+// Import Indonesian translations
 import common_id from './locales/id/common.json';
 import home_id from './locales/id/home.json';
 import about_id from './locales/id/about.json';

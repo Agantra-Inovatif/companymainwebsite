@@ -12,13 +12,13 @@ const Portfolio = () => {
       category: t('project1_category'),
       description: t('project1_description'),
       image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      technologies: ["Python", "TensorFlow", "React", "Node.js", "WebSocket"],
+      technologies: ["Python", "React", "Node.js", "WebSocket"],
       results: [
         t('project1_result1'),
         t('project1_result2'),
         t('project1_result3')
       ],
-      link: "#",
+      link: "https://synergeast.id",
       github: "#"
     },
   ];
@@ -44,17 +44,7 @@ const Portfolio = () => {
             {t('portfolio_subtitle')}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="flex items-center justify-center space-x-3">
-                <div className="text-blue-400">{stat.icon}</div>
-                <div>
-                  <div className="text-2xl font-bold">{stat.value}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+
         </div>
       </section>
 
@@ -107,18 +97,13 @@ const Portfolio = () => {
                   <div className="flex space-x-4">
                     <a
                       href={project.link}
+                      target={'_blank'}
                       className="flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300 text-sm"
                     >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       {t('view_live_button')}
                     </a>
-                    <a
-                      href={project.github}
-                      className="flex items-center border border-gray-300 text-gray-700 px-4 py-2 rounded-full hover:bg-gray-50 transition-all duration-300 text-sm"
-                    >
-                      <Github className="h-4 w-4 mr-2" />
-                      {t('source_code_button')}
-                    </a>
+
                   </div>
                 </div>
               </div>
