@@ -3,6 +3,7 @@ import {Mail, Phone, MapPin, Clock, CheckCircle} from 'lucide-react';
 import '../googleformembed.css';
 import SEO from '../components/SEO.tsx';
 import { useTranslation } from 'react-i18next';
+import { SiWhatsapp } from '@icons-pack/react-simple-icons';
 
 const Contact = () => {
     const { t } = useTranslation('contact');
@@ -31,6 +32,13 @@ const Contact = () => {
             title: t('working_hours_title'),
             details: t('working_hours_details'),
             description: t('working_hours_description')
+        },
+        {
+            icon: <SiWhatsapp className="h-6 w-6"/>,
+            title: "WhatsApp",
+            details: "+37253194019",
+            description: t('whatsapp_description'),
+            link: "https://wa.me/37253194019"
         }
     ];
 
@@ -79,19 +87,19 @@ const Contact = () => {
             {/* Contact Form & Info */}
             <section className="py-16 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
 
                         {/* Contact Form */}
-                        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+                        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 flex flex-col">
                             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{t('start_project_title')}</h2>
 
-                            <div className={'google-iframe-container'}>
+                            <div className={'google-iframe-container h-[800px] lg:h-full flex-grow'}>
                                 <iframe
                                     frameBorder="0"
                                     marginHeight="0"
                                     marginWidth="0"
-                                    height={'600'}
-                                    width={'100%'}
+                                    height="100%"
+                                    width="100%"
                                     src="https://docs.google.com/forms/d/e/1FAIpQLSf63ETuIE8tA4JNbr7hu7QFRWjpBRhKy933Pk3FSD8j6aCZpg/viewform?usp=header"
                                 > Loading ..... </iframe>
                             </div>
@@ -118,7 +126,7 @@ const Contact = () => {
                                             </div>
                                             <div>
                                                 <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
-                                                <p className="text-blue-600 font-medium mb-1 text-sm md:text-base break-all">{item.details}</p>
+                                                <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 font-medium mb-1 text-sm md:text-base break-all">{item.details}</a>
                                                 <p className="text-gray-600 text-sm">{item.description}</p>
                                             </div>
                                         </div>
