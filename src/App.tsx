@@ -2,6 +2,8 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { HelmetProvider } from 'react-helmet-async';
+import OrganizationSchema from './components/OrganizationSchema';
 import Home from './pages/Home';
 import About from './pages/About';
 import Apps from './pages/Apps';
@@ -18,31 +20,34 @@ import CancellationPolicy from './pages/CancellationPolicy';
 
 function App() {
     return (
-        <Router>
-            <div className="min-h-screen bg-white">
-                <Navbar/>
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/apps" element={<Apps/>}/>
-                    <Route path="/about" element={<About/>}/>
-                    <Route path="/portfolio" element={<Portfolio />} />
-                    <Route path="/blog" element={<Blog/>}/>
-                    <Route path="/contact" element={<Contact/>}/>
-                    <Route path="/ailabs" element={<AILabs/>}/>
-                    <Route path='/store' element={<Store/>}/>
+        <HelmetProvider>
+            <Router>
+                <div className="min-h-screen bg-white">
+                    <OrganizationSchema />
+                    <Navbar/>
+                    <Routes>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/apps" element={<Apps/>}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/portfolio" element={<Portfolio />} />
+                        <Route path="/blog" element={<Blog/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
+                        <Route path="/ailabs" element={<AILabs/>}/>
+                        <Route path='/store' element={<Store/>}/>
 
 
-                    <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
-                    <Route path="/tos" element={<TermOfService/>}/>
-                    <Route path="/returnpolicy" element={<ReturnPolicy/>}/>
-                    <Route path="/refundpolicy" element={<RefundPolicy/>}/>
-                    <Route path="/cancellationpolicy" element={<CancellationPolicy/>}/>
+                        <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
+                        <Route path="/tos" element={<TermOfService/>}/>
+                        <Route path="/returnpolicy" element={<ReturnPolicy/>}/>
+                        <Route path="/refundpolicy" element={<RefundPolicy/>}/>
+                        <Route path="/cancellationpolicy" element={<CancellationPolicy/>}/>
 
 
-                </Routes>
-                <Footer/>
-            </div>
-        </Router>
+                    </Routes>
+                    <Footer/>
+                </div>
+            </Router>
+        </HelmetProvider>
     );
 }
 
